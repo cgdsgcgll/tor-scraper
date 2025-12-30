@@ -1,4 +1,4 @@
-# Tor-Scraper
+Tor-Scraper
 
 Tor ağı (.onion uzantılı web siteleri) üzerinde çalışan, Go (Golang) ile geliştirilmiş
 otomatik bir web scraper uygulamasıdır. Uygulama, Tor Browser tarafından sağlanan
@@ -9,7 +9,7 @@ Bu proje, eğitim ve akademik amaçlarla geliştirilmiştir.
 
 ---
 
-## 🚀 Özellikler
+Özellikler
 
 - Tor ağı üzerinden (.onion) web sitelerine erişim
 - SOCKS5 proxy desteği (127.0.0.1:9150)
@@ -21,7 +21,7 @@ Bu proje, eğitim ve akademik amaçlarla geliştirilmiştir.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+Kullanılan Teknolojiler
 
 - **Go (Golang)**
 - **Tor Browser / Tor Service**
@@ -32,7 +32,7 @@ Bu proje, eğitim ve akademik amaçlarla geliştirilmiştir.
 
 ---
 
-## 📂 Proje Yapısı
+Proje Yapısı
 
 tor-scraper/
 ├── main.go
@@ -46,14 +46,14 @@ tor-scraper/
 
 ---
 
-## ⚙️ Kurulum ve Çalıştırma
+Kurulum ve Çalıştırma
 
-### 1️⃣ Gerekli Yazılımlar
+1️⃣ Gerekli Yazılımlar
 
 - Go
 - Tor Browser (çalışır durumda olmalı)
 
-### 2️⃣ Tor SOCKS5 Proxy Kontrolü
+2️⃣ Tor SOCKS5 Proxy Kontrolü
 
 ```powershell
 Test-NetConnection 127.0.0.1 -Port 9150

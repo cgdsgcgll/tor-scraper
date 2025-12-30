@@ -1,0 +1,14 @@
+
+output/
+scan_report.log
+
+
+*.exe
+
+
+/bin/
+*.test
+
+
+.DS_Store
+Thumbs.db

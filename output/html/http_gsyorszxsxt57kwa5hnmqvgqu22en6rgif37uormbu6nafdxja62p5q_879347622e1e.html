@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Personality</title>
+
+   <link rel="icon" type="image/png" href="/static/img/logo.png">
+   
+   <!-- <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+
+   <link href="/static/css/sb_admin_pro.css" rel="stylesheet" type="text/css" /> 
+
+  <link href="/static/template/css/ui.cs" rel="stylesheet" type="text/css" />
+  <link href="/static/template/css/responsive.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
+
+
+<script>
+   $(document).ready(function(){
+      $( "#btn_ara" ).click(function() {
+         $('#card_giris .card-title').html("Arama yapılıyor...")
+         $('#card_ara, #card_giris .card-body').hide()
+      })
+
+   })
+</script>
+</head>
+<body>
+
+
+   <div id="card_giris" class="card mb-4">
+            
+      <div class="card-header bg-danger text-white">
+         <div id="card_giris_title" class="card-title h1 text-white py-4 px-4" style="font-size: 44px; font-weight: bold'">Personality (Demo)</div>
+      </div>
+
+      <div class="card-body">
+         <img class="img-fluid" width="270" src="/static/img/personality.jpg" />
+         <br>Full versionu <a target="_blank" href="http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilan_detaylari&ilan_id=638e6f94faaf3d68d21ee2f5">Atlantis Market'ten satın alabilirsiniz.</a> 
+         <hr>Önemli: Sadece büyük harfler kullanın
+      </div>
+      
+    </div>
+
+
+
+
+    <div id="card_ara" class="card">
+      <!-- <div class="card-header h2">
+         Arama bilgileri
+      </div> -->
+      <div class="card-body">
+
+         <form id="form_ara" action="sonuclar" method="post">
+            <input name="TC" type="text" placeholder="TC" class="form-control mb-2">
+            <input name="ADI" type="text" placeholder="Ad" class="form-control mb-2">
+            <input name="SOYADI" placeholder="Soyad" class="form-control mb-2">
+            <!-- <input name="DOGUMTARIHI" placeholder="Doğum Tarihi" class="form-control mb-2" disabled>
+            <input name="NUFUSIL" placeholder="Nüfusa kayıtlı il" class="form-control mb-2" disabled>
+            <input name="NUFUSILCE" placeholder="Nüfusa kayıtlı ilçe" class="form-control mb-2" disabled>
+            <input name="ANNEADI" type="text" placeholder="Anne Adı" class="form-control mb-2" disabled>
+            <input name="BABAADI" type="text" placeholder="Baba Adı" class="form-control mb-2" disabled> -->      
+            <button type="submit" class="btn btn-primary btn-lg w-100 mb-2" id="btn_ara">Ara</button>
+         </form>
+   
+      </div>
+    </div>
+
+
+
+
+  
+   <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
+
+

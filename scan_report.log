@@ -1,0 +1,36 @@
+=== Scan started at 2025-12-30T20:14:50+03:00 ===
+[INFO] screenshots enabled -> output/screenshots/
+[INFO] Scanning: http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/
+[ERR] http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/ status=0 err=Get "http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[INFO] Scanning: http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilan_detaylari&ilan_id=638e23e3ded2a43e93472b0f
+[ERR] http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilan_detaylari&ilan_id=638e23e3ded2a43e93472b0f status=0 err=Get "http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilan_detaylari&ilan_id=638e23e3ded2a43e93472b0f": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[INFO] Scanning: http://azrailgggtfmgboqumc3li3bltcj36xoxrzum7ofi7lqhcau2lsp2gid.onion/
+[ERR] http://azrailgggtfmgboqumc3li3bltcj36xoxrzum7ofi7lqhcau2lsp2gid.onion/ status=0 err=Get "http://azrailgggtfmgboqumc3li3bltcj36xoxrzum7ofi7lqhcau2lsp2gid.onion/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[INFO] Scanning: http://w4ljqtyjnxinknz4hszn4bsof7zhfy5z2h4srfss4vvkoikiwz36o3id.onion/
+[OK]  http://w4ljqtyjnxinknz4hszn4bsof7zhfy5z2h4srfss4vvkoikiwz36o3id.onion/ saved_html=output\html\http_w4ljqtyjnxinknz4hszn4bsof7zhfy5z2h4srfss4vvkoikiwz36o3i_ac6c6dd746e5.html saved_png=output\screenshots\http_w4ljqtyjnxinknz4hszn4bsof7zhfy5z2h4srfss4vvkoikiwz36o3i_ac6c6dd746e5.png
+[INFO] Scanning: http://gsyorszxsxt57kwa5hnmqvgqu22en6rgif37uormbu6nafdxja62p5qd.onion/
+[OK]  http://gsyorszxsxt57kwa5hnmqvgqu22en6rgif37uormbu6nafdxja62p5qd.onion/ saved_html=output\html\http_gsyorszxsxt57kwa5hnmqvgqu22en6rgif37uormbu6nafdxja62p5q_879347622e1e.html saved_png=output\screenshots\http_gsyorszxsxt57kwa5hnmqvgqu22en6rgif37uormbu6nafdxja62p5q_879347622e1e.png
+[INFO] Scanning: http://zerobinftagjpeeebbvyzjcqyjpmjvynj5qlexwyxe7l3vqejxnqv5qd.onion/
+[OK]  http://zerobinftagjpeeebbvyzjcqyjpmjvynj5qlexwyxe7l3vqejxnqv5qd.onion/ saved_html=output\html\http_zerobinftagjpeeebbvyzjcqyjpmjvynj5qlexwyxe7l3vqejxnqv5q_a4555afac0f1.html saved_png=output\screenshots\http_zerobinftagjpeeebbvyzjcqyjpmjvynj5qlexwyxe7l3vqejxnqv5q_a4555afac0f1.png
+[INFO] Scanning: http://sga5n7zx6qjty7uwvkxpwstyoh73shst6mx3okouv53uks7ks47msayd.onion/
+[OK]  http://sga5n7zx6qjty7uwvkxpwstyoh73shst6mx3okouv53uks7ks47msayd.onion/ saved_html=output\html\http_sga5n7zx6qjty7uwvkxpwstyoh73shst6mx3okouv53uks7ks47msay_26914279adfa.html saved_png=output\screenshots\http_sga5n7zx6qjty7uwvkxpwstyoh73shst6mx3okouv53uks7ks47msay_26914279adfa.png
+[INFO] Scanning: http://prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwqd.onion/
+[OK]  http://prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwqd.onion/ saved_html=output\html\http_prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwq_463ef4c0e3b1.html saved_png=output\screenshots\http_prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwq_463ef4c0e3b1.png
+[INFO] Scanning: http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/
+[OK]  http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/ saved_html=output\html\http_g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqq_b5818d9d7941.html saved_png=output\screenshots\http_g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqq_b5818d9d7941.png
+[INFO] Scanning: http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilanlar
+[OK]  http://atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2id.onion/?sayfa=ilanlar saved_html=output\html\http_atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2i_0d73f081fbbd.html saved_png=output\screenshots\http_atlantisrdcrud2ukxls34sihvidtww7la6rqrfvbygmovvadebnj2i_0d73f081fbbd.png
+[INFO] Scanning: http://tgrnn4foazzcxlmv.onion/
+[ERR] http://tgrnn4foazzcxlmv.onion/ status=0 err=Get "http://tgrnn4foazzcxlmv.onion/": socks connect tcp 127.0.0.1:9150->tgrnn4foazzcxlmv.onion:80: unknown error unknown code: 246
+[INFO] Scanning: http://tadexibajtuta2fx.onion
+[ERR] http://tadexibajtuta2fx.onion status=0 err=Get "http://tadexibajtuta2fx.onion": socks connect tcp 127.0.0.1:9150->tadexibajtuta2fx.onion:80: unknown error unknown code: 246
+[INFO] Scanning: http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/
+[OK]  http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/ saved_html=output\html\http_zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qa_ef318b92c438.html screenshot_fail=page load error net::ERR_EMPTY_RESPONSE
+[INFO] Scanning: http://kq4okz5kf4xosbsnvdr45uukjhbm4oameb6k6agjjsydycvflcewl4qd.onion/
+[OK]  http://kq4okz5kf4xosbsnvdr45uukjhbm4oameb6k6agjjsydycvflcewl4qd.onion/ saved_html=output\html\http_kq4okz5kf4xosbsnvdr45uukjhbm4oameb6k6agjjsydycvflcewl4q_61a7de80b504.html saved_png=output\screenshots\http_kq4okz5kf4xosbsnvdr45uukjhbm4oameb6k6agjjsydycvflcewl4q_61a7de80b504.png
+[INFO] Scanning: http://rfyb5tlhiqtiavwhikdlvb3fumxgqwtg2naanxtiqibidqlox5vispqd.onion/
+[OK]  http://rfyb5tlhiqtiavwhikdlvb3fumxgqwtg2naanxtiqibidqlox5vispqd.onion/ saved_html=output\html\http_rfyb5tlhiqtiavwhikdlvb3fumxgqwtg2naanxtiqibidqlox5vispq_dbdb55581763.html saved_png=output\screenshots\http_rfyb5tlhiqtiavwhikdlvb3fumxgqwtg2naanxtiqibidqlox5vispq_dbdb55581763.png
+[INFO] Scanning: http://prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwqd.onion/
+[OK]  http://prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwqd.onion/ saved_html=output\html\http_prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwq_463ef4c0e3b1.html saved_png=output\screenshots\http_prjd5pmbug2cnfs67s3y65ods27vamswdaw2lnwf45ys3pjl55h2gwq_463ef4c0e3b1.png
+=== Summary OK=11 ERR=5 ===
+=== Scan finished at 2025-12-30T20:19:55+03:00 ===

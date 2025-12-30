@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Azrail</title>
+  <link rel="shortcut icon" type="image/svg" href="img/azrail.png"/>
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/darkster.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+  <style>
+
+	.link {
+		color: #64a19d !important;
+		cursor: pointer;
+	}
+  </style>
+
+  <script>
+
+$(document).ready(function(){
+  "use strict"; // Start of use strict
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 70)
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 100
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+})
+
+  </script>
+
+</head>
+
+<noscript>
+  <div class="h1 alert alert-danger">
+	Bu site javascript kullanmaktadır. 
+	<br />Lütfen tarayıcı ayarlarından Javascript'i aktif edin.
+  </div>
+</noscript>
+  
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="btn_anasayfa navbar-brand matrix"><img src="img/azrail_gray.svg" style="width:40px;height:40px;"/> Azrail</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn_anasayfa nav-link">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn_hakkinda nav-link">Hakkında</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn_kirala nav-link">Kirala</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn_sss nav-link">SSS</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn_iletisim nav-link">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <header id="sayfa_anasayfa" class="masthead dark-bg" style='background-image: url("img/background-dark-min.jpg"); background-size: cover; height: 100vh;'>
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center" style="margin-top: 0px;">
+        <h1 class="sayfa_anasayfa_baslik mx-auto my-0">
+			AZRAIL
+		</h1>
+        <h2 class="sayfa_anasayfa_aciklama text-white-20 mx-auto mt-2 mb-5 matrix" style="display:inline;"></h2>
+		
+		<br /><br />
+		
+		<div class="sayfa_anasayfa_alt_bilgiler" style="display:none;">
+			<div class="hizmet_ucretleri" style="display:inline;"></div>
+			
+			<div class="hizmet_ucretleri_btc_xmr">
+				Hizmet Ücreti: <span class="hizmet_ucreti_usd"></span>
+				<br />
+				<span class="hizmet_ucreti_btc"><br /></span>
+				<span class="hizmet_ucreti_xmr"></span>
+				<hr>
+			</div>
+			
+			<a class="btn_kirala badge badge-danger" style="cursor:pointer;">
+				<img src="img/elde_tabanca.svg" style="width:32px; color:white" /> Kirala
+			</a>
+			
+		</div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <header id="sayfa_hakkinda" class="masthead" style='height: 100vh;'>
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0">HAKKINDA</h1>
+		<div class="text-left" style="display:none">
+			<br />
+			Bazı insanlar haşere gibidir, sırf zarardan ibarettirler, kanınızı emer, etinizi kemirir ve hayatı çekilmez hale getirirler. Size ve sevdiklerinize gün geçtikçe daha fazla zarar verirler. Bir şekilde bunlardan kurtulmak istersiniz ancak yaptığınız tercihler çoğu zaman yeterli gelmez. Gün geçtikçe daha fazla zararlı hale geldiklerini hissedersiniz. 
+			<br /><br />
+			Aslında tek bir seçenek vardır, o sizi yok edecek duruma gelmeden sizin onu yok etmeniz gerekir.
+			<br /><br />
+			Din davranışı niyete, devlet neticeye göre değerlendirir. Yani canınıza, malınıza, sevdiklerinize ya da hayatınıza kasteden birini öldürürseniz tüm dinlere göre bu, kendini koruma refleksi yani nefs-i müdafaadır ve tamamen caizdir. Ancak devlet bu kadar toleranslı değildir, genelde haklı ya da haksız olduğunuza bakmadan sizi ömür boyu hapse mahkum edecektir. 
+			<br /><br />
+			Dinen caiz olanı devletin hukuk sistemine bulaşmadan halletmek istiyorsanız onu kesinlikle <a class="btn_kirala link">Azrail'e havale et</a>melisiniz.
+		</div>
+
+		<div class="text-center" style="display:true">
+			<br />Türkiye'nin ilk ve tek gerçek kiralık katil ayarlama platformu.
+			<br /><br />Tek bir karar ile tüm sorunları ortadan kaldırın.
+			<hr>
+			Problemleri çözmek için kendinizi riske atmaya değmez. <br /><br />Temiz, profesyonel ve gizli bir şekilde kolayca <a class="btn_kirala link">halledilebilir.</a>
+		</div>
+		
+      </div>
+    </div>
+  </header>
+  
+ 
+  <div id="sayfa_kirala"><br /><br /><br /></div>
+  <header id="" class="masthead" style='height: 100vh;'>
+    <div class="container align-items-center">
+      <div class="mx-auto col-12">
+        <h1 class="mx-auto my-0">KIRALA</h1>
+        <h4 class="text-white">Hedef (öldürülecek kişi) bilgilerini aşağıdaki alana girin</h4>
+		
+			<form id="form_kirala">
+			  <div class="form-row">
+				<div class="form-group col-md-6">
+				  <label>Ad</label>
+				  <input type="text" class="form-control" id="hedef_ad" placeholder="">
+				</div>
+				<div class="form-group col-md-6">
+				  <label>Soyad</label>
+				  <input type="text" class="form-control" id="hedef_soyad" placeholder="">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label>Ev Adresi</label>
+				<input type="text" class="form-control" id="hedef_ev_adresi" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label>İş Adresi</label>
+				<input type="text" class="form-control" id="hedef_is_adresi" placeholder="">
+			  </div>
+			  
+			  <div class="form-group">
+				<label>Ek Bilgiler</label>
+				<textarea class="form-control" id="hedef_ek_bilgiler" rows="2"></textarea>
+			  </div>
+			  
+				<a class="btn_kaydet_ve_devam_et badge badge-danger" style="cursor:pointer;">
+					<img src="img/mermi.svg" style="width:32px; color:white" /> Kaydet ve Devam Et
+				</a>
+			</form>
+
+        
+      </div>
+    </div>
+  </header>
+    
+	<div id="sayfa_odeme"><br /><br /></div>
+   <header class="sayfa_odeme masthead" style="display:none;">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto col-12 alert alert-dark">
+			<div class="">
+			Aşağıdaki adrese gerekli <span class="odeme_para_birimi"></span> ödemesini gönderin. 
+				<span class="badge badge-pill badge-primary float-right">
+					<span class="fa fa-spinner fa-spin"></span> Ödeme bekleniyor..
+				</span>
+			</div>
+			<hr>
+			<div class="text-center">
+				<div class="odeme_adresi_qr"></div>
+				<span class="odeme_adresi" style="color:blue"></span>
+				<br /><span class="hizmet_ucreti" style="color:red"></span>
+			</div>
+			<hr>
+			<div style="color:gray;float:right">
+				<a class="btn_odemeyi_xmr_ile_yap badge badge-light" style="display:none;cursor:pointer;">Ödemeyi monero ile yap</a>
+				<a class="btn_odemeyi_btc_ile_yap badge badge-light" style="display:none;cursor:pointer;">Ödemeyi bitcoin ile yap</a>
+			</div>
+			<span class="odeme_aciklama_footer"></span>
+      </div>
+    </div>
+  </header>
+  
+<div id="sayfa_sss"><br /><br /><br /></div>
+<div class="contact-form col-md-12 text-white" data-wow-duration="500ms" data-wow-delay="300ms">
+
+	<br />
+	
+	<h2 class="mx-auto my-0">Sık Sorulan Sorular</h2>
+	
+	<div class="card col-md-12 text-white">
+	
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Nasıl iletişime geçebilirim?</h5>
+			<p class="card-text">	    
+				<a class='btn_iletisim link'>İletişim sayfasına geç</a></
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Öldürme dışında ne tür hizmetleriniz var?</h5>
+			<p class="card-text">	    
+				Aynı fiyata öldürme yerine yaralama, kaçırma (çocuk, yetişkin vs..) ya da kundaklama hizmeti alabilirsiniz. Bunların dışında bir hizmet almak istiyorsanız lütfen iletişime geçin.
+			</p>
+		  </div>
+
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Ip gizliliğini garantiye alma</h5>
+			<p class="card-text">	    
+				Bu site için Tor Browser kullanmanız yeterlidir.
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; İletişim gizliliğini garantiye alma</h5>
+			<p class="card-text">	    
+				<a href="https://protonmail.com"target="_blank">Protonmail</a> ya da <a href="http://danielas3rtn54uwmofdo3x2bsdifr47huasnmbgqzfrec5ubupvtpid.onion">Danielas Mail</a> siteleri üzerinden alacağınız email adresiyle iletişime geçmenizi tavsiye ediyoruz.
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Ödeme gizliliğini garantiye alma</h5>
+			<p class="card-text">
+				Ödemelerde bitcoin(btc) ve monero(xmr) kabul etmekteyiz.
+				Bitcoin en yaygın olarak kullanılan crypto paradır. Bitcoin adreslerimiz sürekli güncellenmektedir ve tamamı tek kullanımlıktır. 
+				Monero ise tamamiyle gizlilik ve anonimlik üzerine ortaya çıkarılmış yaygın kullanılan bir altcoindir.
+				Monero ödemelerinde alıcı ve gönderici bilgilerine kesinlikle ulaşılamaz. 
+				Bitcoin daha kolay temin edilebilir, tek kullanımlık adres sistemiyle %99 anonimlik sunuyoruz. 
+				Monero elde etmek biraz daha uğraş gerektirir ancak size %100 anonimlik sağlayacaktır. 
+				Her iki ödeme türünde de ödemenizi rahatlıkla yapabilirsiniz, anonim ödemeler için gerekli tüm önlemleri almış bulunmaktayız. 
+			</p>
+		  </div>
+		  		
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Reddedilen hedef kişiler</h5>
+			<p class="card-text">	    
+				* Hedef kişiler 18 yaş üstü olmalı.
+				<br />* Üst düzey siyasiler olmamalı (Milletvekili ve üstü kabul etmiyoruz).
+				<br />Yukarıdaki kriterlere uymayan ödemeler aynen iade edilir. 
+			</p>
+		  </div>	
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Nerden Bitcoin satın alabilirim?</h5>
+			<p class="card-text">	    
+				Türkiye'de binance, paribu, koinim, localbitcoins ve benzeri sitelerden kolayca bitcoin satın alabilirsiniz.
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Nerden Monero satın alabilirim?</h5>
+			<p class="card-text">	    
+				Bitcoin satın aldıktan sonra exchange sitelerinden Monero'ya dönüştürebilirsiniz. 
+				Binance üzerinde bu işlemler daha kolay yapılır gibi görünüyor.
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Daha önceden ödeme yaptığım adres değişti, eski adresler yine de geçerli midir?</h5>
+			<p class="card-text">	    
+				Bitcoin adreslerimiz anonimlik gereği sıklıkla değiştirilmektedir ancak eski adreslere de ödeme yapılabilir, geçerlidirler.
+			</p>
+		  </div>
+		 
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Kimlerden oluşuyorsunuz?</h5>
+			<p class="card-text">	    
+				Ekibimiz yeterli sayıda olup her biri alanında uzman kişilerden oluşmaktadır. 
+				Türkiye'nin en profesyonel çalışma gruplarından biriyiz. 
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Gelecekte yakalanma ihtimalim var mıdır?</h5>
+			<p class="card-text">	    
+				İtiraf etmediğiniz sürece kesinlikle hayır. 
+			</p>
+		  </div>
+		  
+
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Öldürme emri verdiğimde çalışmanın tamamlanması ne kadar sürer?</h5>
+			<p class="card-text">	    
+				Vakaları ortalama 20-30 gün içerisinde kesin olarak sonuçlandırıyoruz. 
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Hangi bölge ya da ülkelerde faaliyet gösteriyorsunuz?</h5>
+			<p class="card-text">	    
+				Türkiye, Almanya, KKTC ve Azerbaycan birince derecede aktif olduğumuz ülkelerdir. Bunların dışında bir yerde faaliyet talep ediyorsanız detaylar için lütfen iletişime geçin. 
+			</p>
+		  </div>
+		  
+		  <div class="card-body">
+			<h5 class="card-title">&#8658; Win Win</h5>
+			<p class="card-text">	    
+				Öldürmek istediğiniz kişi yakınlarınızdan biriyse öldürme emri vermeden önce kendisine hayat sigortası yaptırın. Bu şekilde hem kişiden tamamen kurtulacak hem de üstüne yüklü miktarda para alacaksınız.
+			</p>
+		  </div>
+		  
+	</div>
+
+
+
+</div>
+
+
+
+
+ <!-- Contact Section -->
+  <header id="sayfa_iletisim" class="contact-section" style="padding-bottom: 70px">
+    <div class="col-md-12 container">
+
+      <div class="row">
+
+        <div class="col-md-12 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center mb-2">
+              <i class="fa fa-envelope text-primary mb-2" style="color:white !important"></i>
+              <h3 class="text-uppercase m-0">İletişim</h3>
+              <hr class="my-4">
+              <div class="text-info-50">
+                İletişim adresimiz: azrail@danwin1210.de
+              </div>
+			</div>
+			  
+			<div class="alert">	    
+				Not: Gmail ve buna benzer e-posta sistemleri gönderilen emailleri spam olarak algılıyor.
+				<br />İletişim için <a href="https://protonmail.com" target="_blank">Protonmail</a>, <a href="https://danwin1210.de/" target="_blank">danwin1210.de</a> ya da <a href="https://tutanota.com" target="_blank">tutanota</a> gibi anonim email sistemlerini kullanmanızı tavsiye ediyoruz. 
+
+			</div>
+			
+
+            </div>
+          </div>
+
+		
+        </div>
+
+    </div>
+
+  </header>
+  
+  
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+	<script src="js/ortak.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="plugins/wallet-address-validator.min.js"></script>
+	<script src="plugins/jquery.qrcode.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script>
+	toastr.options = {
+	  "closeButton": true,
+	  "debug": false,
+	  "newestOnTop": false,
+	  "progressBar": false,
+	  "positionClass": "toast-bottom-right",
+	  "preventDuplicates": false,
+	  "onclick": null,
+	  "showDuration": "300",
+	  "hideDuration": "1000",
+	  "timeOut": "4000",
+	  "extendedTimeOut": "1000",
+	  "showEasing": "swing",
+	  "hideEasing": "linear",
+	  "showMethod": "fadeIn",
+	  "hideMethod": "fadeOut"
+	}
+	</script>
+ 
+</body>
+
+</html>

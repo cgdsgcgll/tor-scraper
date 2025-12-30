@@ -1,0 +1,2047 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Type some info">
+  <meta name="author" content="Type name">
+
+  <title>Atlantis Market</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Bootstraplar -->
+  <!-- <link href="css/sb_ui_kit.css" type="text/css" rel="stylesheet"> -->
+  <link href="css/tema.css" rel="stylesheet" type="text/css" />
+  <!-- Bootstrap'lar -->
+
+  <!-- Dosyalar -->
+  <link rel='stylesheet' href='css/ortak.css' type='text/css' media='all' />
+
+  <!-- Custom css -->
+  <link href="plugins/template/css/ui.css" rel="stylesheet" type="text/css" />
+  <link href="plugins/template/css/responsive.css" rel="stylesheet" type="text/css" />
+
+  <!-- Font awesome 5 -->
+  <link href="plugins/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+  
+  <!-- Template custom js -->
+  <script src="plugins/template/js/script.js"></script>
+
+  <script type="text/javascript" src="plugins/jquery-3.3.1.min.js"></script>
+
+
+</head>
+
+<body>
+  
+  <noscript>
+    <div class="card">
+      <br>
+      <h1>Javascript</h1>
+      <hr>
+      <h2>Daha iyi bir kullanıcı deneyimi sunabilmek için javascript kullanıyoruz. Sitenin doğru bir şekilde
+        yüklenebilmesi için tarayıcıdaki javascript özelliğini açmalısınız.</h2>
+    </div>
+  </noscript>
+
+
+
+  <header class="section-header">
+    <section class="header-main">
+      <div class="container-fluid">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-2 col-sm-4 col-4">
+            <a class="navbar-brand" name="kategori" ilan_kategori="market" ilan_kategori_yeri = "yan_menu" style="font-weight: bold;">
+              <img class="logo mb-2" height="32" src="img/logo.png"/><span class="navbar-title">Atlantis</span>
+            </a>
+             <!-- <i class="fas fa-spinner fa-spin" height="24"></i> -->
+          </div>
+          <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+            <div class="float-end">
+              <a onclick="sayfaya_git('sayfa_giris_yap')" class="giris_yapilmadi btn btn-light me-1">
+                <i class="fas fa-sign-in-alt"></i> <span class="ms-1 d-none d-sm-inline-block">Giriş Yap</span>
+              </a>
+              
+              <a onclick="sayfaya_git('sayfa_kayit_ol')" class="giris_yapilmadi btn btn-light me-1">
+                <i class="fas fa-user-plus"></i> <span class="ms-1 d-none d-sm-inline-block">Kayıt Ol </span>
+              </a>
+
+
+<!-- 
+              <a sayfaya_git="sayfa_ayarlar" class="giris_yapildi me-1 d-none d-sm-inline-block">
+                <i class="fab fa-monero"></i> <span class="xmr_usdt"></span>$
+              </a> -->
+
+              <a type="button" sayfaya_git="sayfa_mesajlarim" class="giris_yapildi btn btn-light position-relative me-1">
+                <i class="far fa-envelope"></i>
+                <span class="user_okunmamis_mesaj_sayisi position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+              </a>
+
+              <a type="button" sayfaya_git="sayfa_ayarlar" class="giris_yapildi btn btn-light position-relative me-1">
+                <span class="fas fa-cog blue-text"></span>
+              </a>
+
+
+
+
+
+              <span class="giris_yapildi">
+                <a class="btn btn-light dropdown-toggle" href="#" role="button" id="userDropdown"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user_nick user_avatar user_avatar_sag_ustteki" width="24"></span> <span
+                    class="user_nick d-none d-sm-inline">user_nick</span>
+                </a>
+
+                <ul class="dropdown-menu bg-light" aria-labelledby="userDropdown" style="z-index: 99999 !important;">
+
+                  <li class="text-white" style="background-color: darkorchid;">
+
+                      <div class="user_nick user_avatar card-img-top text-center pt-2"></div>
+                      <div class="text-center">
+                        <div class="card-title h4">
+                          <span class="btn_user_detaylari user_nick h2 text-white"></span>
+                        </div>
+                        <p class="card-text badge_user_uyelik_tipi user_uyelik_tipi"></p>
+                      </div>
+  
+
+                  </li>
+
+
+                  <li>
+
+                    <div style="width: 12rem;">
+
+
+                      <ul class="list-group list-group-flush">
+                        <li sayfaya_git="sayfa_ayarlar" class="list-group-item list-group-item-action text-white h2" style="background-color: cornflowerblue">
+                              <span class="user_bakiye_xmr_confirmed"></span> <img class="logo mb-2" height="32" src="img/ayarlar/xmr_logo.png">
+                              <span class="span_user_bakiye_xmr_unconfirmed" style="display:none;color:orange">
+                                <br />Unconfirmed: <span class="user_bakiye_xmr_unconfirmed"></span> <span class="fab fa-monero"></span>
+                              </span>
+                              <span class="span_user_escrowdaki_bakiye" style="display:none;color:red">
+                                <br />Kilitli: <span class="user_escrowdaki_bakiye"
+                                  title="Ödemelerde kullandığınız bakiye"></span><span class="fab fa-monero"></span>
+                              </span>
+                        </li>
+
+                        <li onclick="sayfaya_git('sayfa_mesajlarim')" class="list-group-item list-group-item-action">
+                          <span class="fas fa-envelope"></span> Mesajlar <span class="user_okunmamis_mesaj_sayisi position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+                        </li>
+
+                        <li onclick="sayfaya_git('sayfa_ayarlar')" class="list-group-item list-group-item-action">
+                          <span class="fas fa-cog blue-text"></span> Ayarlar
+                        </li>
+
+                        
+                        <li onclick="sayfaya_git('sayfa_ilanlarim')" class="sadece_satici list-group-item list-group-item-action"  style="display:none;">
+                          <i class="fas fa-briefcase"></i> İlanlarım
+                        </li>
+
+
+                        <li onclick='window["ilan_ekleme_modu"]="ekle"; sayfaya_git("sayfa_ilan_ekle")' class="sadece_satici list-group-item list-group-item-action" style="display:none;">
+                          <i class="fas fa-plus"></i> İlan Ekle
+                        </li>
+
+                        <li class="btn_satici_ol sadece_alici list-group-item list-group-item-action" style="display:none;">
+                            <i class="fas fa-store"></i> Satıcı Ol                          
+                        </li>
+
+                        <li class="list-group-item list-group-item-action">
+                          <a class="card-link btn btn-danger text-white" onclick="cikis_yap()"><i class="fas fa-door-open"></i> Çıkış Yap</a>
+                        </li>
+
+
+                      </ul>
+
+                    </div>
+
+                    
+                  </li>
+
+
+                </ul>
+              </span>
+
+
+
+
+            </div>
+          </div> <!-- col end.// -->
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="input-group">
+              <input id="text_ara" type="search" class="form-control" style="width:45%" placeholder="ara..">
+              <button id="btn_ara" class="btn btn-dark">
+                <i class="fa fa-search"></i>
+              </button>
+              <a type="button" sayfaya_git="sayfa_sss" class="btn btn-dark d-none d-lg-inline">
+                <i class="fas fa-info"></i> SSS
+              </a>
+            </div> <!-- input-group end.// -->
+
+          </div> <!-- col end.// -->
+
+        </div> <!-- row end.// -->
+      </div> <!-- container end.// -->
+    </section> <!-- header-main end.// -->
+  </header> <!-- section-header end.// -->
+
+  <section>
+    <div class="container-fluid">
+
+
+      <article id="hesap"  style="display: none;" class="card card-banner bg-light h-100" style="min-height: 200px">
+        <!-- <a class="btn_mesaj_sil btn btn-sm btn-light float-end"><span class="fas fa-times"></span></a> -->
+        <a type="button" class="btn-close en_ustte_goster" aria-label="Close" style="position: absolute; top: 0px; right: 0px;"></a>
+    
+        <div class="p-3 p-lg-5" style="max-width:70%">
+          <h3>Monero geçici senkronizasyon problemi yaşanmaktadır</h3>
+          <p>Monero ağından kaynaklı senkronizasyon problemlerinden dolayı giriş ve cüzdan oluşturma hataları alabilirsiniz. Kısa süre içerisinde düzeltilecektir.           </p>
+        </div>
+        <img src="img/guvenli_alisveris_garantisi.png" height="100%" class="img-bg">
+      </article>
+
+      <article id="splash_sayfa_ilanlar" class="card card-banner bg-light h-100" style="min-height: 200px">
+        <!-- <a class="btn_mesaj_sil btn btn-sm btn-light float-end"><span class="fas fa-times"></span></a> -->
+        <a type="button" class="btn-close en_ustte_goster" aria-label="Close" style="position: absolute; top: 0px; right: 0px;"></a>
+
+
+        <div id="guvenli_alisveris_garantisi" style="display: true;">
+          <div class="p-3 p-lg-5" style="max-width:70%">
+            <h3>Güvenli alışveriş garantisi</h3>
+            <p>Hizmeti aldığınız onaylanıncaya kadar ödeme satıcıya aktarılmaz.</p>
+            <a class="btn btn-warning" sayfaya_git="sayfa_sss"><i class="fas fa-caret-right"></i>Detaylar</a>
+            <a class="btn btn-info btn-lg d-none d-lg-inline" sayfaya_git="sayfa_sss"><i class="fas fa-info"></i>Sık sorulan sorular</a>
+          </div>
+          <img src="img/guvenli_alisveris_garantisi.png" height="100%" class="img-bg" style="mix-blend-mode: multiply;">
+        </div>
+
+        <div id="guvenli_alisveris_garantisi" style="display: none;">
+          <div class="p-3 p-lg-5" style="max-width:70%">
+            <h3>Mesajlaşmalar temizlendi.</h3>
+            <p>Anonimliğinizi güçlendirme adına periyodik olarak hesaplardaki tüm mesajlaşmalar tamamen temizlenmektedir.</p>
+          </div>
+          <img src="img/temizlik.png" height="100%" class="img-bg">
+        </div>
+
+        <div id="monero_senkronizasyon_problemi_duyurusu" style="display: none;">
+          <a type="button" class="btn-close en_ustte_goster" aria-label="Close" style="position: absolute; top: 0px; right: 0px;"></a>
+      
+          <div class="p-3 p-lg-5" style="max-width:70%">
+            <h3>Monero geçici senkronizasyon problemi yaşanmaktadır</h3>
+            <p>Monero ağından kaynaklı senkronizasyon problemlerinden dolayı giriş ve cüzdan oluşturma hataları alabilirsiniz. Kısa süre içerisinde düzeltilecektir.           </p>
+          </div>
+          <img src="img/guvenli_alisveris_garantisi.png" height="100%" class="img-bg">
+        </div>
+
+      </article>
+
+      
+      <sayfa id="sayfa_ilanlar" class="row py-4" style="display:none">
+
+        <aside class="col-lg-3">
+
+          <button class="btn btn-outline-secondary mb-3 w-100  d-lg-none" data-bs-toggle="collapse"
+            data-bs-target="#aside_filter">Kategoriler</button>
+
+          <div id="aside_filter" class="yan_kategoriler collapse card d-lg-block mb-5">
+            <!-- //yan_kategoriler buraya gelecek -->
+          </div>
+        </aside>
+
+
+        <div class="col-lg-9">
+
+          <section class="row d-flex justify-content-center">
+
+            
+            <div class="row">
+              <div class="col-7">
+                <span class="h2 section_ilanlar_baslik float-start" style="font-weight: bold"></span>
+              </div>
+
+              <div class="col-5">
+                <ul class="pagination pagination_ilanlar float-end">
+                  <li class="page-item">
+                    <button class="pagination_onceki page-link"><<</button>
+                  </li>
+                  <select class="pagination_select_sayfalar form-select" width="90">
+                    <option>-</option>
+                  </select>
+                  <!-- <li class="page-item disabled" aria-disabled="true">
+                    <button class="page-link" disabled>/</button>
+                  </li> -->
+                  <li class="page-item">
+                    <a class="pagination_sayfa_sayisi page-link"></a>
+                  </li>
+                  <li class="page-item">
+                    <button class="pagination_sonraki page-link">>></button>
+                  </li>
+                </ul>
+
+
+              </div>
+
+            </div>
+
+            <hr>
+          </section>
+
+
+          <section id="section_ilanlar" class="row"></section>
+
+
+          <hr>
+
+          
+          <footer class="d-flex mt-4">
+            <nav class="ms-3">
+              <ul class="pagination pagination_ilanlar float-end">
+                <li class="page-item">
+                  <button class="pagination_onceki page-link"><<</button>
+                </li>
+                <select class="pagination_select_sayfalar form-select" width="90">
+                  <option>-</option>
+                </select>
+                <li class="page-item">
+                  <a class="pagination_sayfa_sayisi page-link"></a>
+                </li>
+                <li class="page-item">
+                  <button class="pagination_sonraki page-link">>></button>
+                </li>
+              </ul>
+
+
+            </nav>
+
+
+
+
+
+          </footer>
+
+
+
+        </div>
+      </sayfa>
+
+
+
+
+      <sayfa id="sayfa_ilan_detaylari" class="padding-y" style="display: none;">
+
+        <div class="row">
+
+          <section class="bg-secondary py-3 my-4">
+            <div class="container-fluid">
+              <ol class="breadcrumb ondark mb-0" style="color:white !important"></ol>
+
+            </div> <!-- container //  -->
+          </section>
+
+        </div>
+
+        <div class="container-fluid">
+
+
+
+
+
+          <div class="row">
+
+
+
+
+
+            <aside class="col-lg-6">
+              <article class="gallery-wrap">
+                <div class="ilan_detaylari_carousel">
+
+                </div>
+
+              </article>
+            </aside>
+            <main class="col-lg-6">
+              <article class="ps-lg-3">
+
+                <div class="row">
+                  <span class="h1" style="font-weight: bold;">
+                    <span class="text-danger"><i class="fas fa-caret-right"></i><span class="ilan_detaylari_ilan_ad">İlan Ad</span></span> 
+                    <span class="price text-success float-end">
+                      <span class="ilan_detaylari_ilan_fiyat_usd"></span><i class="fas fa-dollar-sign"></i>
+                    </span>
+                    
+                  </span>
+                  <div class="rating-wrap">
+                    <i class="fas fa-hashtag text-secondary me-1"></i><span class="ilan_detaylari_ilan_id text-secondary">İlan id</span>
+                    <span class="text-success float-end">Aktif ilan</span>
+
+                  </div>
+
+                </div>
+
+                <hr>
+
+                <div class="row alert alert-secondary">
+
+                  <!-- <div class="icontext align-items-start">
+                    <div class="col-lg-2 col-sm-6 ilan_detaylari_ilan_satici user_avatar"></div>
+                    <div class="col-lg-10 col-sm-6 text">
+                      <h6><span class="btn_user_detaylari ilan_detaylari_ilan_satici" user_nick="">Vendor</span></h6>
+                      <p class="ilan_detaylari_ilan_icerik_ozet text-muted mb-2" style="overflow: hidden;"></p>
+                      <a class="btn_iletisime_gec" karsidaki="__ilan_satici"><i class="far fa-envelope"></i><span classx="d-none d-sm-inline"> Mesaj gönder</span></a>
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="row g-0"> <aside class="col-xl-3 col-md-4"> <a href="#" class="img-wrap"> <img src="bootstrap5-ecommerce/images/items/1.webp"> </a> </aside> col.// <div class="col-xl-9 col-md-8 border-start"> <div class="card-body"> <a href="#" class="btn btn-light btn-icon float-end"> <i class="fa fa-heart"></i></a> <a href="#" class="title mb-2"> GoPro HERO6 4K Action Camera - Black </a> <div class="price-wrap me-3"> <span class="price h5"> $590.50 </span> <del class="price-old"> $1128.00 </del> </div> price-dewrap // <div class="rating-wrap mb-2"> <ul class="rating-stars"> <li class="stars-active" style="width: 90%;"> <img src="bootstrap5-ecommerce/images/misc/stars-active.svg" alt=""> </li> <li><img src="bootstrap5-ecommerce/images/misc/starts-disable.svg" alt=""> </li> </ul> <span class="label-rating text-warning">4.5</span> <i class="dot"></i> <span class="label-rating text-muted">154 orders</span> <i class="dot"></i> <span class="label-rating text-success">Free Shipping</span> </div> rating-wrap.// <p class="text-muted">The largest GoPro Camera display yet. Electrical heart sensor. Re-engineered Digital Crown with haptic feedback. Entirely familiar, yet completely redesigned</p> <a href="#">Details</a> </div> card-body .// </div> col.// </div> -->
+
+                  <dt class="col-xl-2 col-md-2 col-sm-4 icontext align-items-start">
+                    
+                    <div class="ilan_detaylari_ilan_satici user_avatar mt-1" width="100%" style="max-width: 128px"></div>
+                  </dt>
+                  <dd class="col-xl-10 col-md-10 col-sm-8 border-start">
+                    <!-- <i class="fas fa-store"></i> Vendor -->
+
+                    <hr class="d-block d-sm-none">
+                    <span class="btn_user_detaylari ilan_detaylari_ilan_satici" user_nick=""></span>
+                    <p class="ilan_detaylari_ilan_icerik_ozet" style="color: gray; overflow: hidden; font-style: italic; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;"></p>
+                    <hr>
+                    <a class="btn_iletisime_gec" karsidaki="__ilan_satici"><i class="far fa-envelope"></i><span classx="d-none d-sm-inline"> Mesaj gönder</span></a>
+  
+
+                    
+                  </dd>
+
+            
+                </div>
+
+
+                <dl class="row alert alert-secondary">
+                  <!-- <dt class="col-3"><i class="fas fa-hashtag"></i> İlan id</dt>
+                  <dd class="ilan_detaylari_ilan_id col-9">İlan id</dd> -->
+
+                  <dt class="col-3"><i class="fab fa-monero"></i> Monero Fiyatı</dt>
+                  <dd class="col-9">
+                    <span class="ilan_detaylari_ilan_fiyat_xmr"></span> Xmr
+                  </dd>
+
+                  <dt class="col-3"><i class="fas fa-shipping-fast"></i> Teslimat</dt>
+                  <dd class="col-9">
+                    <span class="ilan_detaylari_ilan_teslimat_bolgesi ilk_harfler_buyuk"></span> (Max <span class="ilan_detaylari_ilan_teslimat_suresi"></span> gün) 
+                  </dd>
+
+
+
+                  <dt class="col-3"><i class="fas fa-user-shield"></i> Escrow Durumu</dt>
+                  <dd class="col-9" user_nick=""><span class="ilan_detaylari_ilan_escrow_kabul_ediyor_mu"></span></dd>
+
+
+                </dl>
+
+
+                <div class="row">
+                  <a class="btn_ilan_satin_alma_onayi_iste btn btn-success btn-lg float-end">
+                    <i class="fas fa-cart-plus me-2" aria-hidden="true"></i>Satın Al (<span class="ilan_detaylari_ilan_fiyat_xmr"></span> <i class="fab fa-monero"></i>)
+                  </a>
+
+                  <a class="btn_ilan_komisyon_kazan mt-2 sadece_referansci btn btn-secondary btn-lg"
+                    style="display: none;">
+                    <i class="fas fa-plus-square me-2" aria-hidden="true"></i> Komisyon Kazan
+                  </a>
+
+
+                </div>
+
+
+              </article> <!-- product-info-aside .// -->
+            </main>
+          </div> <!-- row.// -->
+
+        </div> <!-- container .//  -->
+
+
+        <section class="padding-y mt-4">
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- =================== COMPONENT SPECS ====================== -->
+                <div class="card">
+                  <header class="card-header">
+                    <ul class="tablar_ilan_detaylari nav nav-tabs nav-justified card-header-tabs">
+                      <li class="nav-item">
+                        <a href="#" data-bs-target="#tab_ilan_detaylari" data-bs-toggle="tab"
+                          class="nav-link active"><i class="fas fa-stream"></i> İlan Detayları</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" data-bs-target="#tab_escrow_durumu" data-bs-toggle="tab" class="nav-link"><i class="fas fa-user-shield"></i> Escrow Durumu</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" data-bs-target="#tab_teslimat" data-bs-toggle="tab" class="nav-link">
+                          <i class="fas fa-shipping-fast"></i> Teslimat Seçenekleri
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-target="#tab_user_detaylari" data-bs-toggle="tab" class="nav-link"><i class="fas fa-store"></i> Vendor Profili</a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-target="#tab_satin_al" data-bs-toggle="tab" class="btn_ilan_satin_alma_onayi_iste nav-link"><i class="fas fa-cart-plus"></i> Satın Al</a>
+                      </li>
+
+                    </ul>
+                  </header>
+                  <div class="tab-content">
+                    <article id="tab_ilan_detaylari" class="tab-pane show active card-body">
+                      <div class="ilan_detaylari_ilan_icerik card-text">ilan_detaylari_ilan_icerik</div>
+
+                    </article> <!-- tab-content.// -->
+
+                    <article id="tab_escrow_durumu" class="tab-pane card-body">
+                      <div class="ilan_detaylari_ilan_escrow_kabul_ediyor_mu"></div>
+                    </article>
+                    <article id="tab_teslimat" class="tab-pane card-body">
+                      <i class="fas fa-hand-point-right"></i> Vendor, bu bölgelere hizmet sunmaktadır: <span
+                      class="ilan_detaylari_ilan_teslimat_bolgesi ilk_harfler_buyuk"></span> 
+                      <hr>
+                      <i class="fas fa-hand-point-right"></i> Vendor <span class="ilan_detaylari_ilan_teslimat_suresi"></span> gün içerisinde teslimatın tamamlanacağını garanti ediyor. Teslimat bu süre içerisinde sağlanmazsa işlem otomatik olarak iptal olur ve ödeme alıcıya iade edilir.
+                    </article>
+                    <article id="tab_user_detaylari" class="tab-pane card-body">
+
+                        <div class="ilan_detaylari_ilan_satici user_avatar" width="128"></div>
+                        <div class="h2 ilan_detaylari_ilan_satici" user_nick=""></div>
+                        <hr>
+                        <a class="btn_user_detaylari btn btn-light ilan_detaylari_ilan_satici" user_nick="">Profile bak</a>
+
+                      </span>
+                    </article>
+
+                    <article id="tab_satin_al" class="section_ilan_satin_al tab-pane card-body">
+            
+            
+                              <div class="alert alert-info">
+                                  <div class="card-title h4"><i class="fas fa-quote-left"></i> Satın almadan önce</div>
+                                  <hr>
+                                  <figure>
+                                    <blockquote class="blockquote">
+                                      <p>
+                                        Vendorların teslimatı sağlamak için sizden bilgi talepleri olabilir.
+                                      </p>
+                                    </blockquote>
+                              </div>
+
+                            <figure>
+
+                                <div class="blockquote h2 mt-1">
+                                  <span class="ilan_detaylari_ilan_satici ilk_harfler_buyuk btn_user_detaylari"></span>: <span class="ilan_detaylari_ilan_gonderim_oncesi_alicidan_istenen_bilgiler"></span>
+                                </div>
+
+                              </figure>
+
+                              <div class="md-form amber-textarea active-amber-textarea">
+                                <textarea id="textarea_ilan_alici_notu" class="md-textarea form-control" rows="6" placeholder="Gerekli bilgileri buraya yazabilirsiniz."></textarea>
+                              </div>
+            
+            
+                            <div class="note_tavsiye_eden alert alert-warning mt-2" style="display: none">
+                              <label for="input_user_tavsiye_eden" class="grey-text font-weight-light">Bu ilanı size birisi
+                                önerdiyse
+                                tavsiye eden kişinin kullanıcı adını aşağıdaki kutucuğa girebilirsiniz.</label>
+                              <input type="text" id="input_user_tavsiye_eden" class="form-control">
+                            </div>
+            
+                            <div class="alert alert-light mt-2">
+                              <i class="fas fa-caret-right"></i><strong class="ilan_detaylari_ilan_ad"></strong> ilanını satın almak için mevcut bakiyenizden <strong
+                                class="ilan_detaylari_ilan_fiyat_usd"></strong><strong>$</strong>
+                              (<strong class="ilan_detaylari_ilan_fiyat_xmr"></strong>
+                              <li class="fab fa-monero"></li>) tutarında ödeme alınacaktır.  
+                              <hr>
+                              <div class="ilan_escrow_durumu_aciklamasi"></div>
+                              <hr>
+
+                              <div class="input-group"> <span class="input-group-text"> <i class="fas fa-hashtag"></i> </span> <input id="text_ilan_satin_al_pin_kodu" type="text" maxlength="4" class="form-control" placeholder="Pin kodu" autocomplete="off"> 
+                                <button class="btn_ilan_satin_al btn btn-primary btn-lg" type="button"><span class="fa fa-shopping-basket"></span> Siparişi Onayla</button>
+                              </div>
+
+                              <!-- <a class="btn_ilan_satin_al btn btn-success btn-lg mt-1">
+                                <span class="fas fa-play"></span> Siparişi Onayla
+                              </a> -->
+
+                            </div>
+            
+
+                      
+
+
+
+                    </article>
+
+                  </div>
+
+
+                </div>
+                <!-- =================== COMPONENT SPECS .// ================== -->
+
+
+                <br>
+
+                <div class="card card-light my-3">
+
+       
+                  <div class="card-header">
+                    <h2><i class="fas fa-pen-nib"></i> Değerlendir</h2>
+                    <hr>
+                    <span style="font-size:small"><i class="fas fa-quote-left"></i> Yalnızca halihazırda siparişi bulunan müşteriler (escrow dahil) değerlendirmede bulunabilirler.</span>
+                  </div>
+                  <div class="card-body">
+
+
+                    <article class="card card-product-list">
+                      <div class="row g-0">
+                        <aside class="col-xl-2 col-md-2 col-sm-4 text-center">
+                          <!-- user_avatar -->
+                          <span class="img-wrap user_avatar user_nick"></span><hr>
+                          <span class="user_nick h2 font-weight-bold"></span><br>
+                          <span class="user_nick_crypted text-muted"></span>
+                        </aside>
+                    
+                        <div class="col-xl-10 col-md-10 col-sm-8 border-start">
+                          <div class="card-header text-danger h5" style="font-weight: bold;">
+                    
+                            <i class="fas fa-caret-right"></i><span class="ilan_detaylari_ilan_ad"></span>
+                    
+                          </div>
+                    
+                          <div class="card-body">
+                            
+                            <div>
+                              <span class="star btn btn-light btn-sm" puan="1">
+                                <i class="fas fa-star"></i>
+                              </span>
+
+                              <span class="star btn btn-light btn-sm" puan="2">
+                                <i class="fas fa-star"></i>
+                              </span>
+                              
+                              <span class="star btn btn-light btn-sm" puan="3">
+                                <i class="fas fa-star"></i>
+                              </span>
+                              
+                              <span class="star btn btn-light btn-sm" puan="4">
+                                <i class="fas fa-star"></i>
+                              </span>
+                              
+                              <span class="star btn btn-light btn-sm" puan="5">
+                                <i class="fas fa-star"></i>
+                              </span>
+
+                              <span id="yorum_rating_puan" class="btn btn-light btn-sm text-black float-end" style="display: none;">
+                                <span id="yorum_puan"></span> <i class="fas fa-star" style="color: orange"></i>
+                              </span>
+                            </div>
+
+                            <div class="form-group basic-textarea rounded-corners mb-md-0 mb-4 mt-2">
+                              <textarea class="form-control z-depth-1" id="textarea_yorum_icerik" rows="4"
+                                placeholder="Yorum ekle"></textarea>
+                            </div>
+      
+                            <a id="btn_yorum_ekle" class="btn btn-primary btn-lg float-start mt-3 mb-2"><i class="fas fa-play"></i> Yorum Ekle</a>
+
+                            <div id="div_yorum_eklendi" class="h2 text-success mt-2" style="display: none;">
+                              <i class="fas fa-check"></i> Yorum eklendi
+                            </div>
+                    
+                          </div>
+                    
+                    
+                        </div>
+                      </div>
+                    
+                    
+                    
+                    
+                    </article>
+
+                  </div>
+
+                  <div class="card-footer" style="font-size:12px; color:gray">
+                    <span>
+                      * Anonimlik prensibi gereğince kullanıcı adınız gizli tutulmaktadır, yorumlarda <span class="user_nick_crypted"></span> olarak
+                      görünecektir.
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+              </div>
+
+            </div>
+
+            <br><br>
+
+          </div><!-- container // -->
+        </section>
+
+
+
+      </sayfa>
+
+      
+      <sayfa id="sayfa_sss" style="display:none">
+
+
+        <section id="card_mesajlarim" class="card my-5">
+
+          <div class="h2 card-header text-center">
+            <img class="logo mb-2" height="48" src="img/ayarlar/sss.png"> Sık Sorulan Sorular
+          </div>
+
+          <div class="card-body">
+
+            <div class="accordion" id="accordion_sss">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#s1"
+                    aria-expanded="true" aria-controls="s1">
+                    <i class="fas fa-hand-point-right me-1"></i>Escrow nedir? Nasıl kullanabilirim?
+                  </button>
+                </h2>
+                <div id="s1" class="accordion-collapse collapse show" aria-labelledby="h1">
+                  <div class="accordion-body">
+                    Escrow bir nevi emanet anlamına gelir. Fonksiyon olarak alışveriş garantisi anlamında kullanılmaktadır. Tüm popüler deep web marketlerde olduğu gibi sitemizde de escrow sistemi güvenli bir şekilde kullanılmaktadır. Escrow özelliği aktif ilanlardan sipariş verildiğinde alıcı koruması devreye girer.
+                    Ödemeniz vendor'a sipariş verilir verilmez hemen aktarılmaz. İşlem başarılı olarak tamamlanana kadar, süreç boyunca escrow havuzunda kilitli olarak tutulur.
+                    Escrow(admin) teslimatın sağlıklı bir şekilde tamamlandığını detaylı olarak kontrol eder, süreç
+                    içerisinde alıcı, vendor ve escrow 3'lü iletişim içerisinde olur.
+                    Escrow özellikli ilanlarda alıcı koruması aktif ve güvenli alışveriş garantisi kapsamındadır.
+                    (Escrow fonksiyonunu sadece site yöneticileri üstlenebilir.)
+                    <hr>
+                    <h5>Escrow aşamasında aşağıdaki algoritmalar geçerlidir:</h5>
+                    * Alıcı onayladığında ödeme satıcıya aktarılır.
+                    <br />
+                    * Vendor vaadettiklerini yerine getirmezse işlem iptal ve ödeme müşteriye iade edilir.
+                    <br />
+                    * Müşteri itiraz ederse, tüm aktivite inceleme altına alınır, müşteri itirazında haklı bulunduğu
+                    takdirde işlem iptal ve ödeme iade edilir.
+                    <br />
+                    * İtiraz durumunda adminlerin mesajları okuma yetkisi bulunur.
+                    Mesajlarda geçen ifadeler müşteri ve vendor için bağlayıcı niteliktedir ve escrow aşamasında dikkate
+                    alınır.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s2" aria-expanded="false" aria-controls="s2">
+                    <i class="fas fa-hand-point-right me-1"></i>İlk defa sipariş verecek üyeler nelere dikkat etmeli?
+                  </button>
+                </h2>
+                <div id="s2" class="accordion-collapse collapse show" aria-labelledby="h2">
+                  <div class="accordion-body">
+                    İlk defa sipariş veriyorsanız ilanlarda "escrow" özelliğinin açık olduğuna dikkat edin.
+                    Escrow özelliği açıksa "güvenli alışveriş garantisi" altındasınız.
+                    Herhangi bir sorun olursa süreç iptal edilir ve müşteriye ödemesi iade edilir.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h3">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s3" aria-expanded="false" aria-controls="s3">
+                    <i class="fas fa-hand-point-right me-1"></i>En kolay nasıl monero alabilirim?
+                  </button>
+                </h2>
+                <div id="s3" class="accordion-collapse collapse show" aria-labelledby="h3">
+                  <div class="accordion-body">
+                    Aşağıdaki seçeneklerden birini kullanabilirsiniz:
+                    <br />A) Bitfinex.com veya kucoin.com siteleri üzerinden kyc doğrulaması yapıp alabilirsiniz (Monero transferleri anonimdir, kimlik onayı ile alabilirsiniz sorun olmaz)
+                    <br />B) Herhangi bir siteden (binancetr, paribu, btcturk vb.) usdt satın alın ve <a href="https://changenow.io/?from=usdttrc20&to=xmr&amountTo=1&fixedRate=true" target="_blank">https://changenow.io/</a> gibi aracı sitelerden xmr'ye dönüştürebilirsiniz.
+
+                    <br />- Bu sitelerin haricinde aşağıdaki borsalardan monero temin edilebilir.
+                    https://coinmarketcap.com/currencies/monero/markets/
+
+                      <hr>
+
+                        * Bitfinex - Kredi kartı / Havale vb. yöntemlerle monero alınabilir.
+                        <br />* Localmonero - Localbitcoins'in monero versiyonu olarak düşünebilirsiniz. Papara, havale, eft gibi yöntemlerle peer to peer monero alabileceğiniz bir platformdur. Monero kuru
+                        satıcıdan satıcıya değişiyor, en uygun teklifi verenden almayı tercih edebilirsiniz. Son derece anonim bir websitesidir. Bu sitenin kendi içerisinde escrow sistemi bulunmaktadır. Güvenli satın alma için bu sitenin escrow sistemini kullanmanız tavsiye edilir. 
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h6">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s6" aria-expanded="false" aria-controls="s6">
+                    <i class="fas fa-hand-point-right me-1"></i>Teslimat nasıl oluyor?
+                  </button>
+                </h2>
+                <div id="s6" class="accordion-collapse collapse show" aria-labelledby="h6">
+                  <div class="accordion-body">
+                    Teslimat yöntemini vendorlar belirler. Elden, dropoff, kargo vb. yöntemler kullanılabilir. 
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h7">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s7" aria-expanded="false" aria-controls="s7">
+                    <i class="fas fa-hand-point-right me-1"></i>Vendor(satıcı) olmak istiyorum
+                  </button>
+                </h2>
+                <div id="s7" class="accordion-collapse collapse show" aria-labelledby="h7">
+                  <div class="accordion-body">
+                    <a class="btn_satici_ol" class="dropdown-item">
+                      Vendor hesabı oluşturmak için buraya tıklayın.
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h8">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s8" aria-expanded="false" aria-controls="s8">
+                    Neden bazı zamanlarda sitenin ismi değişiyor?
+                  </button>
+                </h2>
+                <div id="s8" class="accordion-collapse collapse show" aria-labelledby="h8">
+                  <div class="accordion-body">
+                    Yabancı marketler dahil tüm deep web marketlerde oldukça olağan ve sık rastlanan bir durumdur.
+                    Bunun pek çok sebebi bulunmaktadır. Değişikliklerin periyodik olarak sağlanması güvenlik ve
+                    anonimlik açsından oldukça faydalıdır. Hatta bazı deep web marketler statik domain adresi yerine
+                    onion rotating yöntemiyle dinamik yani sürekli değişen domain adresleri kullanmaktadırlar.
+                    Gelecekte buna benzer bir özelliği eklemeyi planlıyoruz. Kullanıcı geçmişinin ve ilişkilendirilmesinin
+                    tamamen temizlenmesine yardımcı olmasından site hakkında açılan olası soruşturmaların
+                    önceden önünü almaya kadar pek çok konuda faydası olduğu görülmektedir. Değişiklikler olağanüstü
+                    bir durum anlamına gelmez, sıradan ve rutin işlemlerdir.
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h9">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#s9" aria-expanded="false" aria-controls="s9">
+                    Ayrıca
+                  </button>
+                </h2>
+                <div id="s9" class="accordion-collapse collapse show" aria-labelledby="h9">
+                  <div class="accordion-body">
+                    * İlk defa alışveriş yapan müşterilerimize escrow sistemini kullanmalarını kesinlikle tavsiye ediyoruz.
+                    <br />* Sitemizde düşük profil puanına sahip vendoların hesaplarını kapatıyoruz. Müşteri memnuniyeti en hassas olduğumuz mevzudur.
+                    <br />* Bu siteyi alışveriş platformu olarak kullanmanın yanısıra hesabınızı anonim bir monero cüzdanı şeklinde de kullanabilirsiniz.
+                    <br />* Escrow özelliği açık ilanlarda sorunsuz alışveriş yapabilirsiniz. Kullanıcı koruması
+                    tarafımızca sağlanmaktadır.
+                    <br />* Site harici iletişim(satın almadan sonrası haricinde) ve ödemeler kesinlikle yasaktır ve ban sebebidir. Bu kuralı çiğneyen account'lar hesap türü göz önüne alınmadan kapatılmaktadır.
+                    <br />* Daha iyi hizmet sunabilmek adına sistemimizi periyodik olarak güncellemekteyiz. Güncellemeler esnasında sitemizi geçici olarak erişime kapatmak durumunda kalabiliyoruz.Bu esnada haliyle erişim
+                    sağlamakta problemler yaşanabilir. Son derece normaldir ve güncellemeler tamamlandığında site yeniden
+                    açılmaktadır.
+                    <br />* Aklınıza takılan Herhangi bir mevzuda bizimle her daim iletişime geçebilirsiniz. 
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+          </div>
+
+          <div class="card-footer">
+            <span class="float-end">
+              Cevaplar yeterli değil mi? <a class="btn_adminle_iletisime_gec link-primary">İletişime geçin</a>
+
+            </span>
+          </div>
+
+
+        </section>
+
+
+
+
+      </sayfa>
+
+
+
+      
+      <sayfa id="sayfa_mesajlarim" style="display:none">
+
+
+        <section id="card_mesajlarim" class="card bg-secondary text-white my-5">
+          <!-- Card body -->
+
+
+
+          <div class="h1 card-header text-center">
+            <div class="mb-4">
+              <div class="float-start">
+                <img src="img/ayarlar/mesajlar.png" class="mb-2" width="48"/> Mesajlar
+              </div>
+              <div class="float-end">
+                <a class="btn_mesajlarimi_yenile btn btn-light btn-sm">
+                  <i class="fas fa-sync yuklerken_dondur" style="font-size:large"></i> Yenile
+                </a>
+                <a class="admin btn_okunmamis_mesaji_olan_ayricalikli_hesaplar btn btn-light">
+                  <i class="fas fa-users" style="font-size:large"></i>
+                </a>
+              </div>
+
+            </div>
+
+
+
+            <div class="admin" style="display: none">
+              <div id="div_select_ayricalikli_hesaplar"></div>
+              <div id="div_okunmamis_mesaji_olan_ayricalikli_hesaplar"></div>
+            </div>
+
+            
+
+          </div>
+
+            <table id="table_mesajlarim" class="table table-hover table-secondary">
+              <tr>
+                <th><i class="fas fa-user"></i> Kullanıcı</th>
+                <th><i class="fas fa-comments"></i> Mesaj</th>
+                <th width="120" class="d-none d-sm-table-cell"><i class="far fa-calendar-alt"></i> Tarih</th>
+                <th width="40"></th>
+              </tr>
+
+              <tbody id="tbody_mesajlarim">
+                <!-- =======================
+                Mesajlar
+                ======================= -->
+              </tbody>
+            </table>
+
+
+
+
+
+        </section>
+
+
+
+
+      </sayfa>
+
+      <sayfa id="sayfa_user_detaylari" style="display:none">
+
+        
+        <div class="section_satici_bilgisi card hoverable testimonial-card mb-3">
+
+          <!-- Background color -->
+          <div class="card-header text-center bg-primary">
+
+
+          <!-- user_avatar -->
+          <div class="user_detaylari_user_nick user_avatar mx-auto white" width="256"></div>
+
+          <div class="user_detaylari_user_nick text-white" style="font-size:66px; font-weight: bold;">Vendor</div>
+
+          <span class="div_profil_puani card-body h1 text-white">
+
+            <span id="user_profil_puani" style="font-weight: bold;">0</span><i class="fas fa-star" style="color: orange"></i>
+
+          </span>
+
+          </div>
+
+          <div class="card-body text-center">
+
+            <div class="card h-100 border-start-lg border-start-gray">
+              <div class="card-body">
+                <div class="user_detaylari_user_aciklama h3"></div>
+                <hr>
+                <a class="btn_iletisime_gec btn btn-primary mt-2 ms-1"><i class="far fa-envelope"></i> Mesaj Gönder</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        
+        <section class="section_user_a_ait_ilanlar card hoverable mt-3 mb-3">
+
+            <div>
+              <div class="card-header">
+                <h4>Satıcıya ait aktif ilanlar</h4>
+              </div>
+            </div>
+            
+
+            <div class="card-body user_a_ait_ilanlar">
+
+            </div>
+
+
+            <!-- <div class="card-footer">
+              <p class="text-muted">Sadece aktif ilanlar göstermektedir</p>
+            </div> -->
+
+        </section>
+
+        <section class="section_yorumlar card hoverable mt-3 mb-3">
+
+          <div class="card-header h4">
+            Yorumlar <span class="text-muted float-end"><span id="user_detaylari_yorum_sayisi"></span> Yorum</span>            
+          </div>
+
+          <div class="card-body">
+
+            <ul class="ul_user_yorumlari list-unstyled mx-3 my-3"></ul>
+
+
+          </div>
+
+          <div class="card-footer">
+            * Anonimlik prensibi gereğince kullanıcı adları gizli tutulmaktadır. 
+          </div>
+
+        </section>
+
+
+      </sayfa>
+      <!-- /.Main Container -->
+
+
+
+
+
+
+
+
+      <!---------------------------------------------------- HESAP ---------------------------------------------------->
+
+      <sayfa id="sayfa_ilanlarim" class="container my-4 pt-4" style="display:none;">
+        
+        <section id="card_ilanlarim" class="card">
+
+
+          <div class="h2 card-header text-center">
+            İlanlarım <a class="sadece_satici float-end" style="display:none;" sayfaya_git="sayfa_ilan_ekle"
+              onclick='window["ilan_ekleme_modu"]="ekle"'><i class="fas fa-plus"></i></a>
+          </div>
+
+
+          <!-- Card body -->
+          <div class="card-body">
+            <!-- Default form subscription -->
+
+            <table id="table_ilanlarim" class="table table-hover text-start">
+
+              <thead>
+                <tr class="">
+                  <th class="th-sm">Ürün Adı</th>
+                  <th class="th-sm">Fiyat</th>
+                  <th class="th-sm">Ekleme Tarihi</th>
+                  <th class="th-sm">Durum</th>
+                  <th class="th-sm">İşlemler</th>
+                </tr>
+              </thead>
+
+              <tbody id="tbody_ilanlarim">
+
+              </tbody>
+            </table>
+
+
+
+          </div>
+          <!-- Card body -->
+        </section>
+        
+      </sayfa>
+
+
+      <sayfa id="sayfa_ayarlar" class="container mt-4 pt-4" style="display: none;">
+      
+        <div class="card">
+
+          <div class="card-header">
+
+            
+
+            <ul class="nav nav-tabs nav-justified card-header-tabs" id="pills-tab" role="tablist" style="border-bottom: none">
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab_ayarlar_cuzdan" type="button" role="tab" aria-selected="true"><i class="fas fa-wallet"></i> Cüzdanım</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_ayarlar_islem_gecmisi" type="button" role="tab" aria-selected="false"><i class="fas fa-stream"></i> İşlemler</button>
+              </li>
+              <li class="sadece_satici nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_ayarlar_profil_bilgisi" type="button" role="tab" aria-selected="false"><i class="fas fa-user"></i> Profil</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab_ayarlar_guvenlik" type="button" role="tab" aria-selected="false"><i class="fas fa-lock"></i> Güvenlik</button>
+              </li>
+            </ul>
+
+
+
+
+          </div>
+          <div class="card-body">
+
+            
+            <div class="tab-content">
+    
+
+
+              
+              <article id="tab_ayarlar_cuzdan" class="tab-pane active">
+                  <div class="card-body pb-1 mt-1">
+                    <span class="h1"><img class="logo mb-2" height="48" src="img/ayarlar/xmr_logo.png"> Monero</i></span>
+                    
+                    <span class="pb-4 hour green-text float-end h1">
+                      <span class="user_bakiye_xmr_confirmed">0</span> Xmr
+                    </span>
+    
+                    <p class="user_server_xmr mb-0"></p>
+    
+                    <hr>
+
+                    <div class="row">
+
+                      <div class="alert alert-warning" style="display: none;">
+                        <p class="h3">Monero geçici senkronizasyon problemi yaşanmaktadır</p>
+                        <hr>
+                        <span class="text-muted">
+                          Monero ağından kaynaklı senkronizasyon problemlerinden dolayı cüzdan oluşturma hatası alabilirsiniz. Kısa süre içerisinde düzeltilecektir. 
+                        </span>
+
+                      </div>
+
+
+                      <div class="col-lg-4 mb-4">
+                          <div class="card h-100 border-start-lg border-start-success">
+                              <div class="card-body">
+                                  <div class="small text-muted"><i class="fas fa-check"></i> Kullanılabilir</div>
+                                  <div class="user_bakiye_xmr_confirmed h3"></div>
+                                  <span style="color: gray; font-size: small;">Cüzdanınızda kullanıma hazır bakiyenizi gösterir.</span>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4">
+                        <div class="card h-100 border-start-lg border-start-info">
+                            <div class="card-body">
+                                <div class="small text-muted"><i class="fas fa-exchange-alt"></i> Transfer aşamasında</div>
+                                <div class="user_bakiye_xmr_unconfirmed h3"></div>
+                                <span style="color: gray; font-size: small;"> Ortalama 10-15 dakika içerisinde bakiyenize yansır.</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                      <div class="col-lg-4 mb-4">
+                        <div class="card h-100 border-start-lg border-start-danger">
+                            <div class="card-body">
+                                <div class="small text-muted"><i class="fas fa-shield-alt"></i> Escrow'da</div>
+                                <div class="user_escrowdaki_bakiye h3"></div>
+                                <span style="color: gray; font-size: small;">Escrowlu siparişlerdeki kilitli bakiyeler. </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <ul class="list-group list-group-flush h4 text-left">
+                      <li class="list-group-item list-group-item-light text-success">
+                        <i class="fas fa-check"></i> Kullanılabilir <span class="user_bakiye_xmr_confirmed float-end">0</span>
+                      </li>
+                      <li class="list-group-item list-group-item-light text-info">
+                        <i class="fas fa-exchange-alt"></i> Transfer Aşamasında <span class="user_bakiye_xmr_unconfirmed float-end">0</span>
+                      </li>
+                      <li class="list-group-item list-group-item-light text-danger">
+                        <i class="fas fa-shield-alt"></i> Escrow'da <span class="user_escrowdaki_bakiye float-end">0</span>
+                      </li>
+
+                      <li class="list-group-item list-group-item-light">
+                        <a class="btn btn-light btn-lg" onclick="elemana_git('#section_bakiye_ekle')"><span
+                            class="fa fa-arrow-up"></span> Yükle</a>
+                        <a class="btn btn-light btn-lg" onclick="elemana_git('#section_bakiye_cek')"><span
+                            class="fa fa-arrow-right"></span> Gönder</a>
+                      </li>
+
+
+
+
+                    </ul>
+
+
+
+    
+                  </div>
+    
+        
+    
+                <div id="section_bakiye_ekle" class="card mt-4 border border-info border-2">
+   
+              
+                    <div class="card-body">
+
+                      <div class="h2 mt-1">
+                        <img class="logo mb-2" height="48" src="img/ayarlar/bakiye_ekle.png"> Bakiye Yükle
+                        <span class="float-end mt-1" style="font-size: small;">
+                          <i class="fas fa-thumbs-up"></i> Monero transferleri %100 anonimdir.
+                        </span>
+                      
+                      </div>
+
+                      <hr>
+
+                      <h5 class="h5" style="font-weight: bold;">Monero Adresiniz</h5>
+                      <p class="user_server_xmr" style="font-size: 14px"></p>
+
+           
+                      <hr>
+
+                      <div class="alert alert-info">
+                        <div id="user_server_xmr_qr_kodu"></div>
+                        <p class="text-muted">Qr kodu olarak okutabilirsiniz.</p>
+                        <hr>
+                        <span class="text-muted">Bu adrese gönderilen xmr'ler otomatik olarak hesabınıza eklenecektir.</span>
+
+                      </div>
+
+ 
+                    </div>
+    
+                </div>
+    
+    
+
+
+
+                <div id="section_bakiye_cek" class="card mt-4 border border-info border-2">
+
+                  <div class="card-body">
+
+
+                    <div class="h2 mt-1"><img class="logo mb-2" height="48" src="img/ayarlar/bakiye_gonder.png"> Bakiye Gönder</div>
+                    <hr>
+
+                    <form id="form_monero_gonder">
+                
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"><span class="fab fa-monero"></span></span>
+                        <input id="input_cekim_yap_gonderilecek_xmr_adresi"  type="text" class="form-control" placeholder="Monero adresi">
+                      </div>
+  
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                        <input id="input_cekim_yap_miktar" type="text" class="form-control" placeholder="Miktar">
+                        <button class="input-group-text" type="button">xmr</button>
+                        <button class="btn_cekim_yap_tamamini_ekle btn btn-light" type="button"><span
+                          class="fas fa-plus"></span></button>
+                      </div>
+  
+                      
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        <input id="input_cekim_yap_sifre" type="password" class="form-control" placeholder="Şifre">
+                      </div>
+  
+                      <div class="input-group mb-3"> <span class="input-group-text"> <i class="fas fa-hashtag"></i> </span> <input id="text_bakiye_cek_pin_kodu" type="text" maxlength="4" class="form-control" placeholder="Pin kodu" autocomplete="off">
+                        <a class="btn_cekim_yap btn btn-danger btn-lg text-white"><i class="fas fa-arrow-right ms-2"></i>
+                          Çekim Yap</a>
+                      </div>
+  
+
+              
+     
+                    </form>
+                    
+
+                  </div>
+
+                    <div class="card-footer" style="color:gray;font-size:small">
+                      * Çekimlerde site taraflı komisyon alınmamaktadır. 
+                      <br />* Madenci gönderim komisyonları için 0.001$ civarında minimum tutarda bir bakiye bırakmanız çekim yaparken hata vermemesi için tavsiye edilir.
+                    </div>
+
+  
+              </div>
+
+   
+    
+    
+              </article>
+    
+    
+              <article id="tab_ayarlar_guvenlik" class="tab-pane card-body">
+    
+                <!-- Card body -->
+                <div class="card-body">
+    
+                  <!-- Default form subscription -->
+                  <form id="form_sifre_degistir">
+                    <h3 class="text-center py-4">Şifre Değiştir</h3>
+                    <hr style="margin-top:-7px;">
+    
+                    <div class="input-group mb-3">
+                      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                      <input id="mevcut_sifre" type="password" class="form-control" placeholder="Mevcut şifre">
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <span class="input-group-text bg-primary text-white"><i class="fa fa-lock"></i></span>
+                      <input id="yeni_sifre" type="password" class="form-control" placeholder="Yeni şifre">
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <span class="input-group-text bg-primary text-white"><i class="fa fa-lock"></i></span>
+                      <input id="yeni_sifre_tekrar" type="password" class="form-control" placeholder="Yeni şifreyi yeniden girin">
+                    </div>
+
+                    <div class="input-group mt-3">
+                      <span class="input-group-text"> <i class="fas fa-hashtag"></i> </span>
+                      <input id="text_sifre_degistir_pin_kodu" type="text" maxlength="4" class="form-control" placeholder="Pin kodu" autocomplete="off"> 
+                      <a id="btn_user_sifre_degistir" class="btn btn-primary btn-lg">Şifremi Değiştir</a>
+                    </div>
+
+
+
+    
+                  </form>
+                  <!-- Default form subscription -->
+    
+                </div>
+                <!-- Card body -->
+    
+
+                <!-- Card body -->
+                <div class="card-body">
+    
+                  <!-- Default form subscription -->
+                  <form id="form_hesap_gecmisimi_sil">
+                    <h3 class="text-center py-4">Hesap Geçmişimi Sil</h3>
+                    <hr style="margin-top:-7px;">
+
+
+                    <div id="hesap_gecmisini_sil_secenekleri">
+                        
+                        <div class="form-check form-switch fs-5">
+                          <input class="form-check-input" type="checkbox" id="secenek_mesaj_gecmisimi_sil">
+                          <label class="form-check-label" for="secenek_mesaj_gecmisimi_sil">Mesaj geçmişimi sil</label>
+                        </div>
+
+                        <div class="form-check form-switch fs-5">
+                          <input class="form-check-input" type="checkbox" id="cuzdani_sifirla_ve_siparis_gecmisini_temizle">
+                          <label class="form-check-label" for="cuzdani_sifirla_ve_siparis_gecmisini_temizle">Cüzdan adresimi sıfırla ve sipariş geçmişimi temizle</label>
+                        </div>
+
+                        <div class="form-check form-switch fs-5">
+                          <input class="form-check-input" type="checkbox" id="secenek_hesabimi_tamamen_sil">
+                          <label class="form-check-label" for="secenek_hesabimi_tamamen_sil">Hesabımı tamamen sil</label>
+                        </div>
+
+      
+                      <div class="input-group mt-3">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        <input id="text_hesap_gecmisimi_sil_mevcut_sifre" type="password" class="form-control" placeholder="Mevcut şifre">
+                      </div>
+
+                      <div class="input-group mt-3">
+                        <span class="input-group-text"><i class="fas fa-hashtag"></i></span>
+                        <input id="text_hesap_gecmisimi_sil_pin_kodu" type="password" class="form-control" placeholder="Pin kodu">
+                      </div>
+
+                      <div class="input-group mt-3">
+                        <a id="btn_hesap_gecmisimi_sil" class="btn btn-primary btn-lg">Sil</a>
+                      </div>
+                    </div>
+
+    
+                  </form>
+                  <!-- Default form subscription -->
+    
+                </div>
+                <!-- Card body -->
+
+
+
+              </article>
+    
+
+              <article id="tab_ayarlar_islem_gecmisi" class="tab-pane card-body">
+    
+    
+                <section id="card_islemler">
+    
+                      <div class="card">
+                        
+                        <div class="card-body">
+                          <div class="h2 mt-1"><i class="fas fa-exchange-alt"></i> Transferler</div>
+                          <hr>
+                          <table id="table_son_kayitlar" class="table table-hover text-start">
+    
+                            <thead>
+                              <tr class="">
+                                <th class="th-sm">Txid</th>
+                                <th class="th-sm">Miktar</th>
+                                <th class="th-sm d-none d-sm-table-cell">Durum</th>
+                              </tr>
+                            </thead>
+    
+                            <tbody id="tbody_son_kayitlar">
+                              
+                            </tbody>
+                          </table>
+    
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="card">
+
+                        <div class="card-body">
+                          <div class="h2 mt-1"><i class="fas fa-shopping-basket"></i> Alışverişler</div>
+                          <hr>
+
+                          <table id="table_odemeler" class="table table-hover text-start">
+    
+                            <thead>
+                              <tr class="">
+                                <th class="th-sm">Ürün Adı</th>
+                                <th class="th-sm">Alıcı</th>
+                                <th class="th-sm">Satıcı</th>
+                                <th class="th-sm">İşlem Tarihi</th>
+                                <th class="th-sm">Alıcı Notu</th>
+                                <th class="th-sm">İlan Durumu</th>
+                                <th class="th-sm"></th>
+                              </tr>
+                            </thead>
+    
+                            <tbody id="tbody_odemeler">
+                              
+                            </tbody>
+
+                          </table>
+    
+                        </div>
+                      </div>
+    
+    
+                      <br>
+    
+                      <div class="card" style="display: none;">
+                        <div class="card-header">Referans Kazançları</div>
+                        <div class="card-body">
+    
+                          <table id="table_user_refli_odemeleri" class="table table-hover text-start">
+    
+                            <thead>
+                              <tr class="">
+                                <th class="th-sm">Ürün Adı</th>
+                                <th class="th-sm">Alıcı</th>
+                                <th class="th-sm">Satıcı</th>
+                                <th class="th-sm">İşlem Tarihi</th>
+                                <th class="th-sm">Komisyon</th>
+                                <th class="th-sm">İlan Durumu</th>
+                                <th class="th-sm">Kullanılabilir Bakiyeye Ekleme Durumu</th>
+                                <th class="th-sm"></th>
+                              </tr>
+                            </thead>
+    
+                            <tbody id="tbody_user_refli_odemeleri">
+    
+                            </tbody>
+                          </table>
+    
+                        </div>
+    
+                        <a class="btn_ref_kazanclarini_kullanilabilir_bakiyeme_ekle btn btn-outline-green"
+                          style="display: none;"><i class="fas fa-arrow-right ms-2"></i> Kazançları kullanılabilir bakiyeme
+                          ekle</a>
+                      </div>
+    
+    
+    
+    
+                </section>
+    
+    
+    
+              </article>
+    
+    
+    
+    
+            
+              <article id="tab_ayarlar_profil_bilgisi" class="tab-pane card-body">
+
+                  <div class="h2 mt-1 text-center">
+                    <div class="profil_detaylarim_user_nick user_avatar mx-auto white mb-3" width="256"></div>
+                    <span class="h1 profil_detaylarim_user_nick"></span>
+                  </div>
+
+                  <div class="card mt-4">
+
+                    <div class="card-header">Profil fotoğrafı</div>
+
+                    <div class="card-body">
+                      
+                      <form id="form_pp_upload" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                          <input id="input_pp" name="file" type="file" title="Dosya Seç">
+                        </fieldset>
+                      </form>
+
+                      <a class="btn_user_pp_degistir btn btn-primary btn-lg float-end mt-4">Değiştir</a>
+
+                    </div>
+
+                    <div class="card-footer text-muted">* Max 256 x 256 pixel boyutlarında olmalıdır</div>
+
+
+                  </div>
+
+
+
+                  <div class="card mt-4">
+
+                    <div class="card-header">Profil açıklaması</div>
+                    
+                    <div class="card-body">
+                      
+                  
+                      <form id="form_profil_aciklamasi_degistir mt-4">
+                        <div class="input-group mb-3">
+                          <input type="text" id="input_user_aciklama" class="form-control">
+                          <a class="btn_user_aciklama_kaydet btn btn-primary btn-lg">Kaydet</a>
+                        </div>
+                      </form>
+          
+
+                    </div>
+
+
+                  </div>
+
+
+      
+              </article>
+    
+    
+    
+            </div>
+  
+            
+          </div>
+  
+
+        </div>
+
+
+
+
+      </sayfa>
+
+      <!--Main layout-->
+      <sayfa id="sayfa_ilan_ekle" class="mx-4 my-2" style="display:none;">
+
+        
+        <div class="card">
+
+          <!-- Card content -->
+          <div class="card-body">
+            <h4 class="title_ilan_ekle card-title"><span class="fa fa-shopping-cart"></span> İlan Ekle</h4>
+            <hr>
+            
+            <label for="input_ilan_ad" class="grey-text font-weight-light">Ürün adı</label>
+            <input id="input_ilan_ad" type="text" class="form-control md-addon">
+
+            <br>
+
+            <label for="input_ilan_fiyat_usd" class="grey-text font-weight-light">Fiyat</label>
+            <div class="input-group">
+              <input id="input_ilan_fiyat_usd" type="number" class="form-control" value="100">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+              </div>
+             
+            </div>
+
+            <div id="input_ilan_fiyat_diger_kurlardaki_karsiliklari" class="form-text pt-1"></div>
+
+
+            <br>
+
+            <h4 class="card-title">İlan Kategorisi</h4>
+            <div class="sayfa_ilan_ekle_ilan_kategorisi_0 col-md-12 btn-group" role="group" data-toggle="buttons">
+            </div>
+            <div class="sayfa_ilan_ekle_ilan_kategorisi_1 col-md-12 btn-group" role="group" data-toggle="buttons">
+            </div>
+
+            <br />
+
+            <h4 class="card-title"><span class="fa fa-handshake-o"></span> İçerik</h4>
+            <textarea id="textarea_ilan_icerik" class="textarea form-control" rows="10"></textarea>
+            <br />
+
+
+
+            <label for="input_ilan_teslimat_suresi" class="grey-text font-weight-light">Teslimat Bölgesi</label>
+            <p>Ürünü gönderebileceğiniz yerler</p>
+            <div class="input-group">
+              <input id="input_ilan_teslimat_bolgesi" type="text" class="form-control" value="Türkiye">
+            </div>
+
+            <br>
+
+            <label for="input_ilan_teslimat_suresi" class="grey-text font-weight-light">Teslimat Süresi</label>
+            <p>Teslimat en fazla kaç gün içerisinde olacak?</p>
+            <div class="input-group">
+              <input id="input_ilan_teslimat_suresi" type="number" class="form-control" value="7">
+              <div class="input-group-append">
+                <span class="input-group-text">Gün</span>
+              </div>
+            </div>
+
+            <br>
+
+
+
+            <label for="input_ilan_gonderim_oncesi_alicidan_istenen_bilgiler"
+              class="grey-text font-weight-light">Alıcıdan istediğiniz bilgiler</label>
+            <p>
+              Teslimat için alıcıdan hangi bilgileri talep ediyorsunuz? (Örneğin ev adresi ya da email adresi gibi)
+            </p>
+            <input id="input_ilan_gonderim_oncesi_alicidan_istenen_bilgiler" type="text" class="form-control md-addon"
+              value="Adres bilgisi">
+
+            <br />
+
+            <h4 class="card-title">Görüntü Ekle</h4>
+            <p>
+              İlana ait resimleri buraya yükleyin. En fazla 4 adet resim yüklenebilir ve toplam boyut 5mb'tan büyük
+              olmamalıdır.
+              Resimlerdeki meta veriler (konum bilgisi, cihaz bilgisi vs..) güvenliğiniz gereğince otomatik olarak
+              silinecektir.
+            </p>
+
+            <form id="form_file_upload" method="post" enctype="multipart/form-data">
+              <fieldset>
+                <input id="input_ilan_ekle_ilan_imgs" name="file" type="file" title="Dosya Seç">
+              </fieldset>
+            </form>
+
+
+            <br>
+
+            <h4 class="card-title">Escrow Sistemi</h4>
+            <p>100$ ve üzeri ilanlarda aktif edilebilir. Bu ilan için escrow sistemini aktifleştirirseniz, ödeme
+              teslimat gerçekleştirildiği onaylandığında hesabınıza aktarılacaktır. Bu işlem için %5 komisyon
+              alınmaktadır.
+            </p>
+
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="radio_ilan_escrow_kabul_ediyor_mu_0"
+                name="radio_ilan_escrow_kabul_ediyor_mu" checked>
+              <label class="form-check-label" for="radio_ilan_escrow_kabul_ediyor_mu_0">Escrow sistemi aktif
+                edilmesin</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="radio_ilan_escrow_kabul_ediyor_mu_1"
+                name="radio_ilan_escrow_kabul_ediyor_mu">
+              <label class="form-check-label" for="radio_ilan_escrow_kabul_ediyor_mu_1">Escrow sistemi aktif
+                edilsin</label>
+            </div>
+
+            <hr>
+
+
+            <a class="btn_ilan_ekle btn btn-info">İlan Ekle</a>
+
+
+          </div>
+
+        </div>
+        
+
+
+        <br /> <br />
+
+      </sayfa>
+      <!--/Main layout-->
+
+
+      <sayfa id="sayfa_kayit_ol" class="mx-4 my-2" style="display:none;">
+        <div class="card mb-4">
+          <article class="card-body">
+            <span class="h3 mb-4">Kayıt Ol</span>
+            <hr>
+
+            <form>
+              <div class="input-group mb-3"> <span class="input-group-text"> <i class="fa fa-user"></i> </span> <input id="text_uyelik_nick" type="text" class="form-control" placeholder="Kullanıcı Adı"> </div>
+             
+              <div class="input-group mb-3"> <span class="input-group-text"> <i class="fa fa-lock"></i> </span> <input id="text_uyelik_sifre" type="password" class="form-control" placeholder="Şifre"> </div>
+             
+              <div class="input-group mb-3"> <span class="input-group-text"> <i class="fa fa-lock"></i> </span> <input id="text_uyelik_sifre2" type="password" class="form-control" placeholder="Şifreyi yeniden girin"> </div>
+
+              <div class="alert alert-info">
+                <div class="input-group mb-3"> <span class="input-group-text"> <i class="fas fa-hashtag"></i> </span> <input id="text_uyelik_pin_kodu" type="text" maxlength="4" class="form-control" placeholder="Pin kodu" autocomplete="off"> </div>
+                * Pin kodu 4 haneli rakamdan oluşur. Ek bir güvenlik katmanı olarak para çekme, satın alma gibi önemli anlarda sizden ayrıca talep edilir.
+              </div>
+
+              <hr>
+              <div class="kalip_capca_inputlari sayfa_kayit_ol_kalip_capca_inputlari mb-4"></div>
+
+              <div class="col-auto"> <button id="btn_kayit_ol" onclick="kayit_ol()" class="btn btn-primary btn-lg"
+                type="button">Kayıt Ol</button> </div>
+
+            </form>
+
+      
+
+          </article> <!-- card-body end .// -->
+        </div>
+      </sayfa>
+
+      <sayfa id="sayfa_giris_yap" class="mx-4 my-2" style="display:none;">
+        <aside class="col-lg-12">
+          <!-- ==============COMPONENT LOGIN 3 ============== -->
+          <div class="card">
+            <div class="card-body">
+              <span class="h3 mb-4">Giriş Yap</span>
+              <hr>
+              <form>
+                <div class="input-group mb-3"> <span class="input-group-text"> <i class="fa fa-user"></i> </span> <input
+                    id="text_giris_nick" type="text" class="form-control" placeholder="Kullanıcı Adı"> </div>
+               
+                <div class="input-group mb-3"> <span class="input-group-text"> <i class="fa fa-lock"></i> </span> <input
+                    id="text_giris_sifre" type="password" class="form-control" placeholder="Şifre"> </div>
+               
+
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="kalip_capca_inputlari sayfa_giris_yap_kalip_capca_inputlari mb-4"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="col-auto"> 
+                  <button id="btn_giris_yap" onclick="giris_yap()" class="btn btn-primary w-100" type="button">Giriş
+                    Yap</button>
+                </div>
+
+
+
+              </form> <!-- form end.// -->
+            </div> <!-- card-body end.// -->
+          </div> <!-- card end.// -->
+          <!-- ============== COMPONENT LOGIN 3 END.// ============== -->
+        </aside>
+
+      </sayfa>
+
+
+    </div> <!-- container .//  -->
+  </section>
+
+
+
+
+  <article class="card content-body">
+    <div class="row g-5">
+      <div class="col-md-3">
+        <div class="icontext">
+          <div class="icon"> <span class="icon-sm"> <i class="fas fa-user-shield fa-lg text-success"></i> </span> </div>
+          <div class="text">
+            <h6 class="title">Güvenli Alışveriş Garantisi</h6>
+            <p>Escrow sistemi ile ödemeniz doğrudan satıcıya aktarılmaz. Escrow havuzunda kilitli tutulur. Ürünü ya da hizmeti sorunsuz bir şekilde alıp onay vermeden bakiye satıcıya gönderilmeyecektir.</p>
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-3">
+        <div class="icontext">
+          <div class="icon"> <span class="icon-sm"> <i class="fas fa-mask fa-lg text-primary"></i> </span> </div>
+          <div class="text">
+            <h6 class="title">Tor Browser ile %100 Anonim Gezinti</h6>
+            <p>Tor browser, internet bağlantınızda eşsiz anonimlik sağlar. Ip adresiniz tamamen gizlenmiş durumdadır.</p>
+          </div>
+        </div> 
+      </div>
+      <div class="col-md-3">
+        <div class="icontext">
+          <div class="icon"> <span class="icon-sm"> <i class="fab fa-monero fa-lg text-primary"></i> </span> </div>
+          <div class="text">
+            <h6 class="title">Monero ile %100 Anonim Ödemeler</h6>
+            <p>Ödemelerde %100 anonimlik için sadece Monero kabul ediyoruz. Bitcoin dahi izlemeye açıktır ancak Monero'da transferler hiçbir şekilde takip edilemez. </p>
+          </div>
+        </div> 
+      </div> 
+      <div class="col-md-3">
+        <div class="icontext">
+          <div class="icon"> <span class="icon-sm"> <i class="fas fa-comment-dots fa-lg text-primary"></i> </span> </div>
+          <div class="text">
+            <h6 class="title">7/24 Destek</h6>
+            <p>Bizimle her zaman iletişime geçebilirsiniz.</p>
+            <a class="btn btn-light btn_adminle_iletisime_gec link-primary mt-1">Mesaj gönder</a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </article>
+
+  
+
+  <footer class="section-footer bg-primary footer-dark">
+    <div class="container-fluid">
+      <section class="footer-main padding-y">
+
+        <div class="row">
+          <aside class="col-12 col-sm-12 col-lg-3">
+            <article class="me-lg-4">
+              <img src="img/logo.png" class="logo-footer"> <span class="navbar-title">Atlantis market</span> <img class="logo-footer" src="img/loaders/55.svg" style="display: none;">
+              <p class="mt-3">Hazineler en derinde gizlidir.</p>
+            </article>
+          </aside>
+          <aside class="col-6 col-sm-4 col-lg-2">
+            <h6 class="title">Kategoriler</h6>
+            <ul class="list-menu list_alttaki_kategoriler">
+              <!--
+              <li> <a href="#">About us</a></li>
+              <li> <a href="#">Find store</a></li>
+              <li> <a href="#">Categories</a></li>
+              <li> <a href="#">Blogs</a></li>
+              -->
+            </ul>
+          </aside>
+          <aside class="col-6 col-sm-4 col-lg-2">
+            <h6 class="title">Hakkında</h6>
+            <ul class="list-menu">
+              <li> <a sayfaya_git="sayfa_sss">Sık Sorulan Sorular</a></li>
+              <li> <a class="btn_satici_ol">Satıcı Ol</a></li>
+            </ul>
+          </aside>
+          <aside class="col-6 col-sm-4  col-lg-2">
+            <h6 class="title">İletişim</h6>
+            <ul class="list-menu">
+              <li> <a class="btn_adminle_iletisime_gec"> Bize yazın </a></li>
+            </ul>
+          </aside>
+
+          <aside class="col-6 col-sm-4  col-lg-2">
+            <h6 class="title">Güncel kurlar</h6>
+            <ul class="list-menu">
+              <li>
+                <i class="fab fa-monero"></i> <span class="xmr_usdt"></span>$
+              </li>
+              <li>
+                <i class="fab fa-monero"></i> <span class="xmr_try"></span>₺
+              </li>
+            </ul>
+          </aside>
+
+<!-- <hr>
+
+          <div class="d-flex flex-column align-items-center align-items-lg-start">
+            <div class="copyright">
+              &copy; Powered by <strong><a target="_blank" href="http://b5q3qc7g3ag2h4ddjzrd7mkz5aden7yfit227hdzv7bmpixlkta2gzid.onion">Xmr Store</a></strong>
+            </div>
+          </div> -->
+
+        </div> <!-- row.// -->
+      </section> <!-- footer-top.// -->
+
+
+    </div> <!-- container end.// -->
+  </footer>
+
+
+  <!-- <script src="plugins/jquery.qrcode.min.js"></script> -->
+  <script src="plugins/easy.qrcode.min.js"></script>
+  <script src="plugins/wallet-address-validator.min.js"></script>
+
+  <script type="text/javascript" src="js/jsci.js"></script>
+  <script type="text/javascript" src="js/capca.js"></script>
+  <script type="text/javascript" src="js/kaliplar_index.js"></script>
+  
+  <!-- Bootstrap js -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Editor -->
+  <link rel="stylesheet" href="plugins/sceditor/minified/themes/default.min.css" id="theme-style" />
+  <script src="plugins/sceditor/minified/sceditor.min.js"></script>
+  <script src="plugins/sceditor/minified/icons/monocons.js"></script>
+  <script src="plugins/sceditor/minified/formats/bbcode.js"></script>
+  <script src="plugins/sceditor/languages/tr.js"></script>
+
+  <!-- js-bbcode-parser -->
+  <script src="plugins/js-bbcode-parser/bbcode-config.js"></script>
+  <script src="plugins/js-bbcode-parser/bbcode-parser.js"></script>
+  <script src="plugins/pulsate.min.js"></script>
+  
+  <!-- Dark tema -->
+  <!-- <link rel='stylesheet' href='plugins/dark_tema/dark.css' type='text/css' media='all' />
+  <script src="plugins/dark_tema/dark.js"></script> -->
+
+  <div id="kaliplar" style="display:none">
+
+    <div id="hic_ilan_yok_kalibi">
+      <div class="alert alert-light col-md-12 mt-2 ms-3" style="margin-bottom:400px !important;">
+        Herhangi bir kayıda ulaşılamadı
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="loading_div"></div>
+
+
+
+  <div class="modal fade" id="modal_mesaj_gonder" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-xl">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title card-header"><i class="far fa-envelope"></i> Mesaj Gönder</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="card card-team">
+              <div class="card-body text-center">
+                  <span class="card-team-img mb-3 mesaj_detaylari_mesaj_kimden user_avatar" width="128"></span>
+                  <div class="h1 mesaj_detaylari_mesaj_kimden mt-2">mesaj_kimden</div>
+                  <hr>
+                  <div class="h5 mb-0 mesaj_detaylari_mesaj_icerik">mesaj_icerik</div>
+              </div>
+          </div>
+  
+          <section class="section_mesaj_gonder col-md-12 mt-2" style="padding-left:0px;padding-right:0px;">
+  
+            <div class="card card-light">
+              <div class="card-header h3">
+                <span class="mesaj_detaylari_mesaj_kime user_avatar" width="60"></span> <span class="mesaj_detaylari_mesaj_kime"></span>
+                <span style="display:none">
+                  <i class="fas fa-user"></i> <span class="mesaj_detaylari_mesaj_kime"></span>
+                </span>
+              </div>
+              <div class="card-body">
+
+                <div id="div_select_hazir_mesajlar" class="mb-2 admin" style="display:none"></div>
+                
+                <div class="media-body text-center text-md-left ms-md-3 ms-0">
+                  <div class="form-group basic-textarea rounded-corners mb-md-0 mb-4">
+                    <textarea class="form-control z-depth-1" id="textarea_mesaj_icerik" rows="4"
+                      placeholder="Mesaj"></textarea>
+                  </div>
+  
+                  <br>
+  
+                  <div class="capca col-lg-4 col-12"></div>
+                  <br />
+                  <!-- <label for="input_capca_cevap" class="grey-text font-weight-light float-start">Lütfen resimdeki karakterleri aşağıdaki alana girin</label> -->
+                  <input type="text" id="input_capca_cevap" class="input_capca_cevap_mesaj_gonder form-control" autocomplete="off" placeholder="Resimdeki karakterler">
+                  <br />
+  
+                  <a type="button" class="btn_mesaj_gonder btn btn-primary btn-lg float-end">Gönder</a>
+  
+                  <div class="admin div_gecikmeli_mesaj_sureleri" style="display:none;">
+                    <a id="btn_mesaj_gonder" class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">5dk</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">15dk</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">30dk</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">45dk</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">1s</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">2s</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">4s</a>
+                    <a class="btn_mesaj_gonder btn btn-light btn-sm" style="color:black">12s</a>
+                  </div>
+                </div>
+  
+  
+  
+  
+  
+              </div>
+  
+  
+              <div class="admin card-footer">
+
+                <div class="float-start">
+                  <a class='btn_hazir_mesajlara_ekle btn btn-secondary' style='font-size:small' title='Hazır mesajlara ekle'><i class="far fa-keyboard fa-2x"></i></a>
+                  <a class='btn_hazir_mesajlardan_sil btn btn-secondary' style='font-size:small' title='Hazır mesajlardan sil'><i class="far fa-trash-alt fa-2x"></i></a>             
+                </div>
+                <div class="float-end">
+                  <a class='btn_usera_islem_yap btn btn-secondary' style='font-size:small'
+                    islem='spam_yasak_mesaji_gonder' title='Spam yasak mesajı gönder'><i
+                      class="fas fa-virus-slash fa-2x"></i></a>
+                  <a class='btn_usera_islem_yap btn btn-secondary' style='font-size:small'
+                    islem='site_disi_iletisim_yasak_mesaji_gonder' title='Site dışı iletişim yasak mesajı gönder'><i
+                      class="fas fa-phone-slash fa-2x"></i></a>
+                  <a class='btn_usera_islem_yap btn btn-secondary' style='font-size:small' islem='sessize_al'
+                    title='Sessize Al'><i class="fas fa-comment-slash fa-2x"></i></a>
+                  <a class='btn_usera_islem_yap btn btn-secondary' style='font-size:small' islem='engelle'
+                    title='Giriş yapmasını engelle'><i class="fas fa-user-slash fa-2x"></i></a>
+                </div>
+              </div>
+  
+            </div>
+  
+  
+          </section>
+
+
+        </div>
+        <!-- <div class="modal-footer">
+          <a type="button" class="btn btn-primary" sayfaya_git="sayfa_ayarlar" data-bs-dismiss="modal" aria-label="Close">Bakiye Yükle</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="modal fade" id="modal_bakiye_yetersiz" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bakiye Yeterli Değil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/para_yukle.png" class="mx-auto d-block mb-2">
+        Bakiyeniz bu işlem için malesef yeterli değil. Hesabınıza monero transferi gerçekleşirdikten sonra işleme devam edebilirsiniz. 
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary" sayfaya_git="sayfa_ayarlar" data-bs-dismiss="modal" aria-label="Close">Bakiye Yükle</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

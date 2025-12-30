@@ -58,9 +58,9 @@ Kurulum ve Çalıştırma
 ```powershell
 Test-NetConnection 127.0.0.1 -Port 9150
 
-### 3️⃣ Uygulamayı Çalıştırma
+3️⃣ Uygulamayı Çalıştırma
 go run . -targets target.yaml -socks 127.0.0.1:9150 -shots=true
 
-### 4️⃣ Derlenmiş Binary ile Çalıştırma
+4️⃣ Derlenmiş Binary ile Çalıştırma
 .\tor-scraper.exe -targets target.yaml -socks 127.0.0.1:9150 -shots=true
 ```
